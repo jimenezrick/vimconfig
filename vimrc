@@ -2,28 +2,24 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+set guioptions+=c
+set guioptions-=T
+set guioptions-=l
+set guioptions-=r
+set guioptions-=L
+set guioptions-=R
+
 let s:uname = system("echo -n $(uname)")
 if s:uname == "Darwin" && has("gui_running")
-	set guioptions=-t
 	set guifont=Monaco:h10
 elseif s:uname == "Darwin"
 	echo
 elseif has("gui_running")
-	colorscheme soso
-	set guioptions+=c
-	set guioptions-=T
 	set guifont=Terminus\ 8
+	colorscheme soso
 else
 	set t_Co=256
 	colorscheme zenburn
-endif
-
-if s:uname == "Darwin"
-	let g:erlangManPath="/usr/local/lib/erlang/man"
-else
-	" TODO: remove with future versions of Vim
-	autocmd BufRead,BufNewFile *.hrl set filetype=erlang
-	let g:erlangManPath="/usr/local/lib/erlang/man"
 endif
 
 syntax on
@@ -36,13 +32,15 @@ autocmd FileType haskell set expandtab tabstop=4 shiftwidth=4
 autocmd FileType tex,mail set textwidth=72
 autocmd BufNewFile,BufRead *.txt set textwidth=72
 
+" TODO: remove with future versions of Vim
+autocmd BufRead,BufNewFile *.hrl set filetype=erlang
+let g:erlangManPath="/usr/local/lib/erlang/man"
 let g:erlangCompleteFile="~/.vim/bundle/vimerl/autoload/erlang_complete.erl"
 let g:erlangCheckFile="~/.vim/bundle/vimerl/compiler/erlang_check.erl"
 
+" Use Omni completion with `CTRL-X + CTRL-O'
 " Create the system tags file with this command:
 "	ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -f ~/.vim/systags /usr/include /usr/local/include
-"
-" Use later Omni completion with `CTRL-X + CTRL-O'
 set tags+=~/.vim/systags
 set tags+=~/.vim/bundle/tags-cpp-stl/tags-cpp-stl
 set nocompatible
