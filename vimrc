@@ -24,16 +24,18 @@ endif
 
 syntax on
 filetype plugin indent on
-autocmd FileType c set foldmethod=syntax
-autocmd FileType cpp set foldmethod=syntax foldnestmax=2
-autocmd FileType erlang set foldmethod=expr
-autocmd FileType python set foldmethod=indent
-autocmd FileType haskell set expandtab tabstop=4 shiftwidth=4
-autocmd FileType tex,mail set textwidth=72
-autocmd BufNewFile,BufRead *.txt set textwidth=72
+autocmd FileType c setlocal foldmethod=syntax
+autocmd FileType cpp setlocal foldmethod=syntax foldnestmax=2
+autocmd FileType erlang setlocal foldmethod=expr
+autocmd FileType python setlocal foldmethod=indent
+autocmd FileType haskell setlocal expandtab tabstop=4 shiftwidth=4
+autocmd FileType tex,mail setlocal textwidth=72 spell
+autocmd BufNewFile,BufRead *.txt,*.markdown,*.md,README setlocal textwidth=72 spell
 
 " TODO: remove with future versions of Vim
-autocmd BufRead,BufNewFile *.hrl set filetype=erlang
+autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal textwidth=72 formatoptions+=t spell
+autocmd BufNewFile,BufRead *.hrl setlocal filetype=erlang
+
 let g:erlangManPath="/usr/local/lib/erlang/man"
 let g:erlangCompleteFile="~/.vim/bundle/vimerl/autoload/erlang_complete.erl"
 let g:erlangCheckFile="~/.vim/bundle/vimerl/compiler/erlang_check.erl"
