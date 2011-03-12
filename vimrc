@@ -39,6 +39,7 @@ autocmd BufNewFile,BufRead *.hrl setlocal filetype=erlang
 let g:erlangManPath="/usr/local/lib/erlang/man"
 let g:erlangCompleteFile="~/.vim/bundle/vimerl/autoload/erlang_complete.erl"
 let g:erlangCheckFile="~/.vim/bundle/vimerl/compiler/erlang_check.erl"
+let g:erlangHighlightBIFs=1
 
 " Use Omni completion with `CTRL-X + CTRL-O'
 " Create the system tags file with this command:
