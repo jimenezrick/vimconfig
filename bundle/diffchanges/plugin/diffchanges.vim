@@ -1,17 +1,12 @@
-" Filename:      diffchanges.vim
-" Description:   Shows the changes made to the current buffer in a diff format
-" Maintainer:    Jeremy Cantrell <jmcantrell@gmail.com>
-" Last Modified: Sun 2009-11-29 20:24:26 (-0500)
+" Filename:    diffchanges.vim
+" Description: Shows the changes made to the current buffer.
+" Maintainer:  Jeremy Cantrell <jmcantrell@gmail.com>
 
-if v:version < 700
+if exists("g:diffchanges_loaded")
     finish
 endif
 
-if exists("loaded_diffchanges")
-    finish
-endif
-
-let loaded_diffchanges = 1
+let g:diffchanges_loaded = 1
 
 let g:diffchanges_diff = []
 let g:diffchanges_patch = []
@@ -24,27 +19,11 @@ endif
 let s:save_cpo = &cpo
 set cpo&vim
 
-" Mappings {{{
-if !hasmapto('<Plug>DiffChangesDiffToggle')
-    nmap <silent> <unique> <leader>dcd <Plug>DiffChangesDiffToggle
-endif
-
-if !hasmapto('<Plug>DiffChangesPatchToggle')
-    nmap <silent> <unique> <leader>dcp <Plug>DiffChangesPatchToggle
-endif
-
-nnoremap <unique> <script> <Plug>DiffChangesDiffToggle  <SID>DiffChangesDiffToggle
-nnoremap <unique> <script> <Plug>DiffChangesPatchToggle <SID>DiffChangesPatchToggle
-
-nnoremap <SID>DiffChangesDiffToggle  :DiffChangesDiffToggle<cr>
-nnoremap <SID>DiffChangesPatchToggle :DiffChangesPatchToggle<cr>
-
 command! -bar DiffChangesDiffToggle  :call s:DiffChangesToggle('diff')
 command! -bar DiffChangesPatchToggle :call s:DiffChangesToggle('patch')
 
 nnoremenu <script> &Plugin.&DiffChanges.&Diff\ Toggle  <SID>DiffChangesDiffToggle
 nnoremenu <script> &Plugin.&DiffChanges.&Patch\ Toggle <SID>DiffChangesPatchToggle
-"}}}
 
 function! s:DiffChangesToggle(mode) "{{{1
     if count(s:diffchanges_modes, a:mode) == 0
@@ -83,20 +62,22 @@ function! s:DiffChangesOn(mode) "{{{1
         let b:diffchanges_savefdl = &fdl
         let save_ft=&ft
         diffthis
+        1
         vert new
         let &ft=save_ft
         execute '0read '.filename
         diffthis
         1
+        set buftype=nofile
+        let bufname = "Changes made to '".filename."'"
     elseif a:mode == 'patch'
         below new
         setlocal filetype=diff
         setlocal foldmethod=manual
         silent 0put=diff
         1
+        let bufname = filename.".patch"
     endif
-    set buftype=nofile
-    let bufname = "Changes made to '".filename."'"
     silent file `=bufname`
     autocmd BufUnload <buffer> call s:DiffChangesOff()
     let bufdiff = bufnr('%')
@@ -136,6 +117,7 @@ endfunction
 function! s:Error(message) "{{{1
     echohl ErrorMsg | echo a:message | echohl None
 endfunction
+
 "}}}
 
 let &cpo = s:save_cpo
