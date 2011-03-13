@@ -1,13 +1,16 @@
+" Vim plugin file
+" Author:        Ricardo Catalinas Jiménez <jimenezrick@gmail.com>
+" Version:       0.4.2
+" Last Modified: Mon Mar 14 00:07:00 CET 2011
+"
 " ----------------------------------------------------------------------------
-" File: spellthis.vim
-" Author: Ricardo Catalinas Jiménez <jimenezrick@gmail.com>
-" Version: 0.4.1
-" Last Modified: Tue Aug  3 18:56:15 CEST 2010
 "
 " Description:
 "   Simple script to check the spelling of the word under the cursor with
 "   Aspell. Useful to check variable names when programming. It supports names
 "   with camelcase or underscores.
+"
+" ----------------------------------------------------------------------------
 "
 " Copyright:
 "              DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
@@ -37,11 +40,6 @@ let s:default_spell_lang="en"
 " Create new user commands, do: `:SpellThis' or `:SpellThisAs {lang}'
 command -nargs=0 SpellThis call s:Spell_This()
 command -nargs=1 SpellThisAs call s:Spell_This_As(<f-args>)
-
-" If there is GUI running, add the menu entry
-if has("gui_running")
-	menu Plugin.SpellThis :SpellThis<Enter>
-endif
 
 function s:Spell_This()
 	call s:Spell_This_As(s:default_spell_lang)
