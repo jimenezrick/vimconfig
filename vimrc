@@ -1,4 +1,5 @@
-filetype off
+filetype off " IMPORTANT: Do NOT use this command if Vim starts with filetype disabled
+
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
@@ -32,7 +33,7 @@ autocmd FileType haskell setlocal expandtab tabstop=4 shiftwidth=4
 autocmd FileType tex,mail setlocal textwidth=72 spell
 autocmd BufNewFile,BufRead *.txt,*.markdown,*.md,README setlocal textwidth=72 spell
 
-" TODO: remove with future versions of Vim
+" TODO: Remove with future versions of Vim
 autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal textwidth=72 formatoptions+=t spell
 autocmd BufNewFile,BufRead *.hrl setlocal filetype=erlang
 
