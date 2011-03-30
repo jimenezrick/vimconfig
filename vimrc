@@ -53,7 +53,7 @@ set backspace=indent,eol,start
 set showmode
 set number
 set ruler
-set cursorline
+"set cursorline
 set showmatch
 set hlsearch
 set autoindent
