@@ -1,33 +1,11 @@
 " Vim plugin file
 " Author:        Ricardo Catalinas Jiménez <jimenezrick@gmail.com>
-" Version:       0.4.2
-" Last Modified: Mon Mar 14 00:07:00 CET 2011
-"
-" ----------------------------------------------------------------------------
-"
+" Version:       0.5
+" Last Modified: Sun Apr 10 22:54:52 CEST 2011
 " Description:
 "   Simple script to check the spelling of the word under the cursor with
 "   Aspell. Useful to check variable names when programming. It supports names
-"   with camelcase or underscores.
-"
-" ----------------------------------------------------------------------------
-"
-" Copyright:
-"              DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-"                      Version 2, December 2004
-"
-"   Copyright (C) 2004 Sam Hocevar
-"    14 rue de Plaisance, 75014 Paris, France
-"   Everyone is permitted to copy and distribute verbatim or modified
-"   copies of this license document, and changing it is allowed as long
-"   as the name is changed.
-"
-"              DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-"     TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
-"
-"    0. You just DO WHAT THE FUCK YOU WANT TO.
-"
-" ----------------------------------------------------------------------------
+"   with camelcase and underscores.
 
 " Do not load if it is already loaded or we are in `compatible mode'
 if exists("g:loaded_spellthis") || &cp
@@ -37,7 +15,7 @@ endif
 let g:loaded_spellthis=1
 let s:default_spell_lang="en"
 
-" Create new user commands, do: `:SpellThis' or `:SpellThisAs {lang}'
+" Create new user commands, use `:SpellThis' or `:SpellThisAs {lang}'
 command -nargs=0 SpellThis call s:Spell_This()
 command -nargs=1 SpellThisAs call s:Spell_This_As(<f-args>)
 
@@ -69,15 +47,11 @@ function s:Spell_This_As(lang)
 endfunction
 
 function s:split_word(word)
-	if match(a:word, "_") != -1
-		return substitute(a:word, "_", " ", "g")
-	else
-		return s:convert_from_camelcase(a:word)
-	endif
+	return substitute(s:convert_from_camelcase(a:word), "_", " ", "g")
 endfunction
 
 function s:convert_from_camelcase(word)
-	return join(split(a:word, '\ze\u\l'), " ")
+	return join(split(a:word, '\ze\u\l'), "_")
 endfunction
 
 function s:create_scratch_buffer(size)
