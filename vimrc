@@ -26,7 +26,7 @@ endif
 syntax on
 filetype plugin indent on
 autocmd FileType c setlocal foldmethod=syntax
-autocmd FileType cpp setlocal foldmethod=syntax foldnestmax=2
+autocmd FileType cpp setlocal foldmethod=syntax foldnestmax=2 cinoptions=h0
 autocmd FileType erlang setlocal foldmethod=expr
 autocmd FileType python setlocal foldmethod=indent
 autocmd FileType haskell setlocal expandtab tabstop=4 shiftwidth=4
