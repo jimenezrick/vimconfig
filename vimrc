@@ -1,4 +1,5 @@
-filetype off " IMPORTANT: Do NOT use this command if Vim starts with filetype disabled
+" IMPORTANT: Uncomment if necessary, Vim must start with filetype disabled.
+"filetype off
 
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
@@ -25,24 +26,21 @@ endif
 
 syntax on
 filetype plugin indent on
+
 autocmd FileType c setlocal foldmethod=syntax
 autocmd FileType cpp setlocal foldmethod=syntax foldnestmax=2 cinoptions=h0
 autocmd FileType erlang setlocal foldmethod=expr
 autocmd FileType python setlocal foldmethod=indent
 autocmd FileType haskell setlocal expandtab tabstop=4 shiftwidth=4
 autocmd FileType tex,mail setlocal textwidth=72 spell
-autocmd BufNewFile,BufRead *.txt,*.markdown,*.md,README setlocal textwidth=72 spell
-
-" TODO: Remove with future versions of Vim
-autocmd BufNewFile,BufRead COMMIT_EDITMSG setlocal textwidth=72 formatoptions+=t spell
-autocmd BufNewFile,BufRead *.hrl setlocal filetype=erlang
+autocmd BufNewFile,BufRead README,*.txt,*.markdown,*.md setlocal textwidth=72 spell
 
 let g:erlangManPath="/usr/local/lib/erlang/man"
 let g:erlangCompleteFile="~/.vim/bundle/vimerl/autoload/erlang_complete.erl"
 let g:erlangCheckFile="~/.vim/bundle/vimerl/compiler/erlang_check.erl"
 let g:erlangHighlightBIFs=1
 
-" Use Omni completion with `CTRL-X + CTRL-O'
+" Use Omni completion with `CTRL-X + CTRL-O'.
 " Create the system tags file with this command:
 "	ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -f ~/.vim/systags /usr/include /usr/local/include
 set tags+=~/.vim/systags
