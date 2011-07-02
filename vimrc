@@ -11,17 +11,14 @@ set guioptions-=r
 set guioptions-=L
 set guioptions-=R
 
-let s:uname = system("echo -n $(uname)")
-if s:uname == "Darwin" && has("gui_running")
+let s:uname = split(system("uname"))[0]
+if s:uname == "Darwin"
 	set guifont=Monaco:h10
-elseif s:uname == "Darwin"
-	echo
-elseif has("gui_running")
-	set guifont=Terminus\ 8
-	colorscheme soso
-else
+elseif $TERM =~ "xterm"
 	set t_Co=256
 	colorscheme zenburn
+elseif $TERM =~ "rxvt-unicode"
+	colorscheme miromiro
 endif
 
 filetype plugin indent on
