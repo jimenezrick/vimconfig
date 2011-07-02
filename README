@@ -1,15 +1,16 @@
  How to use this repository
 ----------------------------
 
-1. git clone GIT-URL .vim
-2. ln -s .vim/vimrc .vimrc
-3. git submodule init
-4. git submodule update
+1. cd $HOME
+2. git clone <repository> .vim
+3. ln -s .vim/vimrc .vimrc
+4. cd .vim
+5. git submodule init
+6. git submodule update
 
-This Vim configuration uses Pathogen
-(http://www.vim.org/scripts/script.php?script_id=2332), the plugins are
-placed in `.vim/bundle/'. Some of the plugins are hosted in GitHub so
-I use Git submodules to track those plugins in `.vim/bundle/' as
+This Vim configuration uses Pathogen (http://github.com/tpope/vim-pathogen),
+the plugins are placed in `.vim/bundle/'. Some of the plugins are hosted in
+GitHub so I use Git submodules to track those plugins in `.vim/bundle/' as
 separate repositories.
 
 
