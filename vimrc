@@ -1,7 +1,7 @@
 " IMPORTANT: Uncomment if necessary, Vim must start with filetype disabled.
 "filetype off
 
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 call pathogen#helptags()
 
 set guioptions+=c
@@ -24,8 +24,8 @@ else
 	colorscheme zenburn
 endif
 
-syntax on
 filetype plugin indent on
+syntax on
 
 autocmd FileType c setlocal foldmethod=syntax
 autocmd FileType cpp setlocal foldmethod=syntax foldnestmax=2 cinoptions=h0
