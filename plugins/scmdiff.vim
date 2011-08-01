@@ -1,0 +1,1 @@
+../bundle/scmdiff/scmdiff.vim
