@@ -28,7 +28,7 @@ autocmd FileType c setlocal foldmethod=syntax
 autocmd FileType cpp setlocal foldmethod=syntax foldnestmax=2 cinoptions=h0
 autocmd FileType erlang setlocal foldmethod=expr
 autocmd FileType python setlocal foldmethod=indent
-autocmd FileType haskell setlocal expandtab tabstop=4 shiftwidth=4
+autocmd FileType haskell,ocaml setlocal expandtab tabstop=4 shiftwidth=4
 autocmd FileType tex,mail setlocal textwidth=72 spell
 autocmd BufNewFile,BufRead README,*.txt,*.markdown,*.md setlocal textwidth=72 spell
 
@@ -48,7 +48,6 @@ set backspace=indent,eol,start
 set showmode
 set number
 set ruler
-"set cursorline
 set showmatch
 set hlsearch
 set autoindent
@@ -56,8 +55,6 @@ set incsearch
 set nowrap
 set list
 set listchars=tab:\|\ ,trail:·,precedes:<,extends:>
-"set tabstop=4
-"set shiftwidth=4
 set nofoldenable
 set foldnestmax=1
 set spelllang=es,en
