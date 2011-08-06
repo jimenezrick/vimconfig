@@ -33,8 +33,6 @@ autocmd FileType tex,mail setlocal textwidth=72 spell
 autocmd BufNewFile,BufRead README,*.txt,*.markdown,*.md setlocal textwidth=72 spell
 
 let g:erlangManPath="/usr/local/lib/erlang/man"
-let g:erlangCompleteFile="~/.vim/bundle/vimerl/autoload/erlang_complete.erl"
-let g:erlangCheckFile="~/.vim/bundle/vimerl/compiler/erlang_check.erl"
 let g:erlangHighlightBIFs=1
 
 " Use Omni completion with `CTRL-X + CTRL-O'.
