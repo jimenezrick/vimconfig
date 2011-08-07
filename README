@@ -1,5 +1,5 @@
  How to use this repository
-----------------------------
+============================
 
 1. cd $HOME
 2. git clone <repository> .vim
