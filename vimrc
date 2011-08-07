@@ -1,6 +1,8 @@
 " IMPORTANT: Uncomment if necessary, Vim must start with filetype disabled.
 "filetype off
 
+source ~/.vim/bundle/pathogen/autoload/pathogen.vim
+
 call pathogen#infect()
 call pathogen#helptags()
 
