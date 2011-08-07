@@ -11,13 +11,13 @@ set guioptions-=r
 set guioptions-=L
 set guioptions-=R
 
-let s:uname = split(system("uname"))[0]
-if s:uname == "Darwin"
+let s:uname = split(system('uname'))[0]
+if s:uname == 'Darwin'
 	set guifont=Monaco:h10
-elseif $TERM =~ "xterm"
+elseif $TERM =~ 'xterm'
 	set t_Co=256
 	colorscheme zenburn
-elseif $TERM =~ "rxvt-unicode"
+elseif $TERM =~ 'rxvt-unicode'
 	colorscheme miromiro
 endif
 
@@ -32,12 +32,18 @@ autocmd FileType haskell,ocaml setlocal expandtab tabstop=4 shiftwidth=4
 autocmd FileType tex,mail setlocal textwidth=72 spell
 autocmd BufNewFile,BufRead README,*.txt,*.markdown,*.md setlocal textwidth=72 spell
 
-let g:erlangManPath="/usr/local/lib/erlang/man"
-let g:erlangHighlightBIFs=1
+" Vimerl customization
+let g:erlangHighlightBIFs = 1
+let g:erlangManPath = '/usr/local/lib/erlang/man'
+
+" Tag List customization for OCaml
+let tlist_ocaml_settings = 'ocaml;c:class;m:object method;M:module;v:global;t:type;' .
+			\ 'f:function;C:constructor;r:structure field;e:exception'
 
 " Use Omni completion with `CTRL-X + CTRL-O'.
 " Create the system tags file with this command:
-"	ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -f ~/.vim/systags /usr/include /usr/local/include
+"	ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -f ~/.vim/systags \
+"		/usr/include /usr/local/include
 set tags+=~/.vim/systags
 set tags+=~/.vim/bundle/tags-cpp-stl/tags-cpp-stl
 set nocompatible
