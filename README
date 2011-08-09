@@ -3,10 +3,10 @@
 
 1. cd $HOME
 2. git clone <repository> .vim
-3. ln -s .vim/vimrc .vimrc
-4. cd .vim
-5. git submodule init
-6. git submodule update
+3. cd .vim
+4. git submodule init
+5. git submodule update
+6. ln -s .vim/vimrc .vimrc
 
 This Vim configuration uses Pathogen (http://github.com/tpope/vim-pathogen),
 the plugins are placed in `.vim/bundle/'. Some of the plugins are hosted in
@@ -17,18 +17,20 @@ separate repositories.
  Working with Git submodules
 -----------------------------
 
-- To add a new submodule (and download the latest revision from GIT-URL):
-	git submodule add GIT-URL bundle/<plugin>
+- To add a new submodule run from top level directory:
 
-- When this Vim repository is cloned, the submodules directories are
-  empty. So to pull submodules in their places, run from top level
-  directory:
+	git submodule add <repository> bundle/<plugin>
+
+- To pull the latest revision of a submodule run from top level directory:
+
 	git submodule init
 	git submodule update
 
-- When the remote repository of one of the submodules is updated with new
-  commits, this will not be automatically pulled to our plugins
+- When the remote repository of one of the submodules is updated with
+  new commits, these will not be automatically pulled to our plugins
   directories. So go to some plugin directory controlled as a submodule
   and run there:
+
 	git pull
-	(Now go to the top level directory and commit changes)
+
+  (Then go to top level directory and commit changes)
