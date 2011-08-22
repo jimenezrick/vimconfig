@@ -10,3 +10,6 @@
 [submodule "bundle/scmdiff"]
 	path = bundle/scmdiff
 	url = git://github.com/ghewgill/vim-scmdiff.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = git://github.com/majutsushi/tagbar.git
