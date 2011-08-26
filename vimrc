@@ -71,10 +71,13 @@ set nospell
 
 match Todo /TODO\|FIXME\|XXX\|FUCKME/
 
-" Adds/removes spaces around the current line
 let mapleader = ','
+
+" Adds/removes spaces around the current block of lines
 map <Leader><Space> 2O<ESC>j2o<ESC>2k
 map <Leader><BS>    {:?.?+1,.d<Enter>}:.,/./-1d<Enter>:nohlsearch<Enter>k
+
+" Removes blank lines around the current one
 map <Leader>d       :?.?+1,-1d<Enter>:+1,/./-1d<Enter>:nohlsearch<Enter>k
 
 map <F1>  :NERDTree<Enter>
