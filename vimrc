@@ -1,4 +1,4 @@
-" IMPORTANT: Uncomment if necessary, Vim must start with filetype disabled.
+" IMPORTANT: Uncomment if necessary, Vim must start with filetype disabled
 "filetype off
 
 source ~/.vim/bundle/pathogen/autoload/pathogen.vim
@@ -42,8 +42,8 @@ let g:erlangManPath = '/usr/local/lib/erlang/man'
 let tlist_ocaml_settings = 'ocaml;c:class;m:object method;M:module;v:global;t:type;' .
 			\ 'f:function;C:constructor;r:structure field;e:exception'
 
-" Use Omni completion with `CTRL-X + CTRL-O'.
-" Create the system tags file with this command:
+" Use Omni completion with `CTRL-X + CTRL-O',
+" create the system tags file with this command:
 "	ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -f ~/.vim/systags \
 "		/usr/include /usr/local/include
 set tags+=~/.vim/systags
@@ -68,14 +68,14 @@ set nospell
 
 match Todo /TODO\|FIXME\|XXX\|FUCKME/
 
-map <F1> :NERDTree<Enter>
-map <F2> :write<Enter>
-map <F3> :nohlsearch<Enter>
-map <F4> :make<Enter>
-map <F5> :shell<Enter>
-map <F6> :TlistToggle<Enter>
-map <F7> :TagbarToggle<Enter>
-map <F9> :checktime<Enter>
+map <F1>  :NERDTree<Enter>
+map <F2>  :write<Enter>
+map <F3>  :nohlsearch<Enter>
+map <F4>  :make<Enter>
+map <F5>  :shell<Enter>
+map <F6>  :TlistToggle<Enter>
+map <F7>  :TagbarToggle<Enter>
+map <F9>  :checktime<Enter>
 map <F10> :DiffChangesDiffToggle<Enter>
 map <F11> :w!<Enter>:!aspell check %<Enter>:w %<Enter>
 map <F12> :SpellThis<Enter>
