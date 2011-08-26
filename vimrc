@@ -36,7 +36,7 @@ autocmd BufNewFile,BufRead README,*.txt,*.markdown,*.md setlocal textwidth=72 sp
 
 " Vimerl customization
 let g:erlangHighlightBIFs = 1
-let g:erlangManPath = '/usr/local/lib/erlang/man'
+let g:erlangManPath       = '/usr/local/lib/erlang/man'
 
 " Tag List customization for OCaml
 let tlist_ocaml_settings = 'ocaml;c:class;m:object method;M:module;v:global;t:type;' .
@@ -63,10 +63,18 @@ set list
 set listchars=tab:\|\ ,trail:·,precedes:<,extends:>
 set nofoldenable
 set foldnestmax=1
+set wildmenu
+set wildmode=full
+set lazyredraw
 set spelllang=es,en
 set nospell
 
 match Todo /TODO\|FIXME\|XXX\|FUCKME/
+
+" Adds/removes spaces around the current line
+let mapleader = ','
+map <Leader><Space> 2O<ESC>j2o<ESC>2k
+map <Leader><BS>    :?.\+?+1,-1d<Enter>:+1,/.\+/-1d<Enter>:nohlsearch<Enter>k
 
 map <F1>  :NERDTree<Enter>
 map <F2>  :write<Enter>
