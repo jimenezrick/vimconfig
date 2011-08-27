@@ -67,7 +67,6 @@ set listchars=tab:\|\ ,trail:·,precedes:<,extends:>
 set nofoldenable
 set foldnestmax=1
 set wildmenu
-set wildmode=full
 set lazyredraw
 set scrolloff=2
 set sidescroll=1
