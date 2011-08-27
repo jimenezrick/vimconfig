@@ -6,6 +6,9 @@ source ~/.vim/bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
+filetype plugin indent on
+syntax on
+
 set guioptions+=c
 set guioptions-=T
 set guioptions-=l
@@ -22,9 +25,6 @@ elseif $TERM =~ 'xterm'
 elseif $TERM =~ 'rxvt-unicode'
 	colorscheme miromiro
 endif
-
-filetype plugin indent on
-syntax on
 
 autocmd FileType c setlocal foldmethod=syntax
 autocmd FileType cpp setlocal foldmethod=syntax foldnestmax=2 cinoptions=h0
@@ -50,6 +50,7 @@ let tlist_ocaml_settings          = 'ocaml;c:class;m:object method;M:module;v:gl
 " ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -f ~/.vim/systags /usr/include /usr/local/include
 set tags+=~/.vim/systags
 set tags+=~/.vim/bundle/tags-cpp-stl/tags-cpp-stl
+
 set nocompatible
 set nobackup
 set backspace=indent,eol,start
