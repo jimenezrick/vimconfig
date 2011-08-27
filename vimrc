@@ -78,7 +78,10 @@ map <Leader><Space> 2O<ESC>j2o<ESC>2k
 map <Leader><BS>    {:?.?+1,.d<Enter>}:.,/./-1d<Enter>:nohlsearch<Enter>k
 
 " Removes blank lines around the current one
-map <Leader>d       :?.?+1,-1d<Enter>:+1,/./-1d<Enter>:nohlsearch<Enter>k
+map <Leader>d :?.?+1,-1d<Enter>:+1,/./-1d<Enter>:nohlsearch<Enter>k
+
+" Corrects word spelling with the first suggestion
+map <Leader>s 1z=
 
 map <F1>  :NERDTree<Enter>
 map <F2>  :write<Enter>
