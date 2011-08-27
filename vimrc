@@ -43,7 +43,7 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Enable_Fold_Column      = 0
 let Tlist_Use_Right_Window        = 1
 let Tlist_Exit_OnlyWindow         = 1
-let tlist_ocaml_settings          = 'ocaml;c:class;m:object method;M:module;v:global;t:type;' .
+let tlist_ocaml_settings          = 'ocaml;c:class;m:object method;M:module;v:global scope;t:type;' .
 				  \ 'f:function;C:constructor;r:structure field;e:exception'
 
 " Use Omni completion with `CTRL-X + CTRL-O', create the system tags file with:
