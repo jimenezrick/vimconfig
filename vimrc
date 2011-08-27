@@ -32,20 +32,22 @@ autocmd FileType erlang setlocal foldmethod=expr
 autocmd FileType python setlocal foldmethod=indent
 autocmd FileType haskell,ocaml setlocal expandtab tabstop=4 shiftwidth=4
 autocmd FileType tex,mail setlocal textwidth=72 spell
-autocmd BufNewFile,BufRead README,*.txt,*.markdown,*.md setlocal textwidth=72 spell
+autocmd BufNewFile,BufRead README,*.txt,*.markdown,*.md setlocal textwidth=72 colorcolumn=+1 spell
 
 " Vimerl customization
 let g:erlangHighlightBIFs = 1
 let g:erlangManPath       = '/usr/local/lib/erlang/man'
 
-" Tag List customization for OCaml
-let tlist_ocaml_settings = 'ocaml;c:class;m:object method;M:module;v:global;t:type;' .
-			\ 'f:function;C:constructor;r:structure field;e:exception'
+" Tag List customization
+let Tlist_GainFocus_On_ToggleOpen = 1
+let Tlist_Enable_Fold_Column      = 0
+let Tlist_Use_Right_Window        = 1
+let Tlist_Exit_OnlyWindow         = 1
+let tlist_ocaml_settings          = 'ocaml;c:class;m:object method;M:module;v:global;t:type;' .
+				  \ 'f:function;C:constructor;r:structure field;e:exception'
 
-" Use Omni completion with `CTRL-X + CTRL-O',
-" create the system tags file with this command:
-"	ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -f ~/.vim/systags \
-"		/usr/include /usr/local/include
+" Use Omni completion with `CTRL-X + CTRL-O', create the system tags file with:
+" ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -f ~/.vim/systags /usr/include /usr/local/include
 set tags+=~/.vim/systags
 set tags+=~/.vim/bundle/tags-cpp-stl/tags-cpp-stl
 set nocompatible
@@ -66,8 +68,11 @@ set foldnestmax=1
 set wildmenu
 set wildmode=full
 set lazyredraw
-set spelllang=es,en
+set scrolloff=2
+set sidescroll=1
+set sidescrolloff=6
 set nospell
+set spelllang=es,en
 
 match Todo /TODO\|FIXME\|XXX\|FUCKME/
 
@@ -77,13 +82,13 @@ let mapleader = ','
 map <Leader><Space> 2O<ESC>j2o<ESC>2k
 map <Leader><BS>    {:?.?+1,.d<Enter>}:.,/./-1d<Enter>:nohlsearch<Enter>k
 
-" Removes blank lines around the current one
+" Collapses the current block of blank lines to one
 map <Leader>d :?.?+1,-1d<Enter>:+1,/./-1d<Enter>:nohlsearch<Enter>k
 
-" Corrects word spelling with the first suggestion
+" Corrects current word spelling with the first suggestion
 map <Leader>s 1z=
 
-map <F1>  :NERDTree<Enter>
+map <F1>  :NERDTreeToggle<Enter>
 map <F2>  :write<Enter>
 map <F3>  :nohlsearch<Enter>
 map <F4>  :make<Enter>
