@@ -52,9 +52,10 @@ set tags+=~/.vim/systags
 set tags+=~/.vim/bundle/tags-cpp-stl/tags-cpp-stl
 
 set nocompatible
+set history=100
+set title
 set nobackup
 set backspace=indent,eol,start
-set showmode
 set number
 set ruler
 set showmatch
