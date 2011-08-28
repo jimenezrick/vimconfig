@@ -16,8 +16,7 @@ set guioptions-=r
 set guioptions-=L
 set guioptions-=R
 
-let s:uname = split(system('uname'))[0]
-if s:uname == 'Darwin'
+if split(system('uname'))[0] == 'Darwin'
 	set guifont=Monaco:h10
 elseif $TERM =~ 'xterm'
 	set t_Co=256
@@ -35,8 +34,8 @@ autocmd FileType tex,mail setlocal textwidth=72 spell
 autocmd BufNewFile,BufRead README,*.txt,*.markdown,*.md setlocal textwidth=72 colorcolumn=+1 spell
 
 " Vimerl customization
-let g:erlangHighlightBIFs = 1
-let g:erlangManPath       = '/usr/local/lib/erlang/man'
+let erlangHighlightBIFs = 1
+let erlangManPath       = '/usr/local/lib/erlang/man'
 
 " Tag List customization
 let Tlist_GainFocus_On_ToggleOpen = 1
@@ -77,15 +76,11 @@ set spelllang=es,en
 
 match Todo /TODO\|FIXME\|XXX\|FUCKME/
 
-let mapleader = ','
-
 " Adds/removes spaces around the current block of lines
 map <Leader><Space> 2O<ESC>j2o<ESC>2k
 map <Leader><BS>    {:?.?+1,.d<Enter>}:.,/./-1d<Enter>:nohlsearch<Enter>k
-
 " Collapses the current block of blank lines to one
 map <Leader>d :?.?+1,-1d<Enter>:+1,/./-1d<Enter>:nohlsearch<Enter>k
-
 " Corrects current word spelling with the first suggestion
 map <Leader>s 1z=
 
