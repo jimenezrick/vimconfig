@@ -27,7 +27,7 @@ endif
 
 autocmd FileType c setlocal foldmethod=syntax
 autocmd FileType cpp setlocal foldmethod=syntax foldnestmax=2 cinoptions=h0
-autocmd FileType erlang setlocal foldmethod=expr
+autocmd FileType erlang setlocal foldmethod=expr expandtab tabstop=4 shiftwidth=4
 autocmd FileType python setlocal foldmethod=indent
 autocmd FileType haskell,ocaml setlocal expandtab tabstop=4 shiftwidth=4
 autocmd FileType tex,mail setlocal textwidth=72 spell
