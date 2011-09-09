@@ -45,6 +45,10 @@ let Tlist_Exit_OnlyWindow         = 1
 let tlist_ocaml_settings          = 'ocaml;c:class;m:object method;M:module;v:global scope;t:type;' .
 				  \ 'f:function;C:constructor;r:structure field;e:exception'
 
+" Syntastic customization
+let syntastic_enable_signs       = 1
+let syntastic_disabled_filetypes = ['c', 'cpp', 'erlang', 'python', 'haskell', 'ocaml', 'tex']
+
 " Use Omni completion with `CTRL-X + CTRL-O', create the system tags file with:
 " ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -f ~/.vim/systags /usr/include /usr/local/include
 set tags+=~/.vim/systags
