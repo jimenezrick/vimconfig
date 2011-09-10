@@ -36,6 +36,8 @@ autocmd BufNewFile,BufRead README,*.txt,*.markdown,*.md setlocal textwidth=72 co
 " Vimerl customization
 let erlangHighlightBIFs = 1
 let erlangManPath       = '/usr/local/lib/erlang/man'
+let erlang_skel_header  = {'author': 'Ricardo Catalinas Jiménez <jimenezrick@gmail.com>',
+			\  'owner' : 'Ricardo Catalinas Jiménez'}
 
 " Tag List customization
 let Tlist_GainFocus_On_ToggleOpen = 1
