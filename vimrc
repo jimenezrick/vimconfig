@@ -34,7 +34,6 @@ autocmd FileType tex,mail setlocal textwidth=72 spell
 autocmd BufNewFile,BufRead README,*.txt,*.markdown,*.md setlocal textwidth=72 colorcolumn=+1 spell
 
 " Vimerl customization
-let erlang_highlight_bif = 1
 let erlang_man_path      = '/usr/local/lib/erlang/man'
 let erlang_skel_header   = {'author': 'Ricardo Catalinas Jiménez <jimenezrick@gmail.com>',
 			 \  'owner' : 'Ricardo Catalinas Jiménez'}
