@@ -34,9 +34,9 @@ autocmd FileType tex,mail setlocal textwidth=72 spell
 autocmd BufNewFile,BufRead README,*.txt,*.markdown,*.md setlocal textwidth=72 colorcolumn=+1 spell
 
 " Vimerl customization
-let erlang_man_path      = '/usr/local/lib/erlang/man'
-let erlang_skel_header   = {'author': 'Ricardo Catalinas Jiménez <jimenezrick@gmail.com>',
-			 \  'owner' : 'Ricardo Catalinas Jiménez'}
+let erlang_man_path    = '/usr/local/lib/erlang/man'
+let erlang_skel_header = {'author': 'Ricardo Catalinas Jiménez <jimenezrick@gmail.com>',
+		       \  'owner' : 'Ricardo Catalinas Jiménez'}
 
 " Tag List customization
 let Tlist_GainFocus_On_ToggleOpen = 1
@@ -48,7 +48,7 @@ let tlist_ocaml_settings          = 'ocaml;c:class;m:object method;M:module;v:gl
 
 " Syntastic customization
 let syntastic_enable_signs       = 1
-let syntastic_disabled_filetypes = ['c', 'cpp', 'erlang', 'python', 'haskell', 'ocaml', 'tex']
+let syntastic_disabled_filetypes = ['c', 'cpp', 'erlang', 'python', 'haskell', 'ocaml', 'tex', 'sh']
 
 " Use Omni completion with `CTRL-X + CTRL-O', create the system tags file with:
 " ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -f ~/.vim/systags /usr/include /usr/local/include
