@@ -48,6 +48,7 @@ let tlist_ocaml_settings          = 'ocaml;c:class;m:object method;M:module;v:gl
 
 " Syntastic customization
 let syntastic_enable_signs       = 1
+let syntastic_auto_loc_list      = 1
 let syntastic_disabled_filetypes = ['c', 'cpp', 'erlang', 'python', 'haskell', 'ocaml', 'tex', 'sh']
 
 " Use Omni completion with `CTRL-X + CTRL-O', create the system tags file with:
