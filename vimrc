@@ -43,8 +43,7 @@ set nofoldenable
 set foldnestmax=1
 set wildmenu
 set lazyredraw
-set scrolloff=2
-set sidescroll=1
+set scrolloff=1
 set sidescrolloff=6
 set nospell
 set spelllang=es,en
