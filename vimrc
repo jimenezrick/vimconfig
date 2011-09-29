@@ -153,8 +153,8 @@ function <SID>CollapseSpaces()
 endfunction
 
 function s:DeleteLines(fromline, toline)
-	mark '
+	mark `
 	silent execute a:fromline . ',' . a:toline . 'delete'
-	normal "g''"
-	mark '
+	normal "g``"
+	mark `
 endfunction
