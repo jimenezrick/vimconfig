@@ -117,7 +117,7 @@ function <SID>RemoveSpaces()
 	if getline('.') == ''
 		let fromline = prevnonblank(line('.')) + 1
 		let toline   = nextnonblank(line('.')) - 1
-		call s:DeleteLines(fromline, toline)
+		call s:DeleteLines(fromline, toline, 0)
 		return
 	endif
 
@@ -152,7 +152,9 @@ function <SID>CollapseSpaces()
 	endif
 endfunction
 
-function s:DeleteLines(fromline, toline)
+function s:DeleteLines(fromline, toline, ...)
 	silent execute a:fromline . ',' . a:toline . 'delete'
-	normal ``
+	if a:0 == 0 || a:0 == 1 && a:1
+		normal ``
+	endif
 endfunction
