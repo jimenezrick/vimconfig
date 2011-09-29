@@ -1,4 +1,4 @@
-" IMPORTANT: Uncomment if necessary, Vim must start with filetype disabled
+" IMPORTANT: Pathogen must start with filetype detection disabled
 "filetype off
 
 source ~/.vim/bundle/pathogen/autoload/pathogen.vim
@@ -56,7 +56,7 @@ autocmd FileType haskell,ocaml setlocal expandtab tabstop=4 shiftwidth=4
 autocmd FileType tex,mail setlocal textwidth=72 spell
 autocmd BufNewFile,BufRead README,*.txt,*.markdown,*.md setlocal textwidth=72 colorcolumn=+1 spell
 
-" Use Omni completion with `CTRL-X + CTRL-O', create the system tags file with:
+" Use omni completion with `CTRL-X + CTRL-O', create the system tags file with:
 " ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -f ~/.vim/systags /usr/include /usr/local/include
 autocmd FileType c,cpp setlocal tags+=~/.vim/systags
 autocmd FileType cpp setlocal tags+=~/.vim/bundle/tags-cpp-stl/tags-cpp-stl
@@ -82,16 +82,6 @@ let syntastic_disabled_filetypes = ['c', 'cpp', 'erlang', 'python', 'haskell', '
 
 match Todo /TODO\|FIXME\|XXX\|FUCKME/
 
-" Adds/removes spaces around current block of lines
-map <Leader><Space> 2O<ESC>j2o<ESC>2k
-map <Leader><BS>    {:?.?+1,.d<Enter>}:.,/./-1d<Enter>:nohlsearch<Enter>k
-" Collapses current block of blank lines to one
-map <Leader><Del>   :?.?+1,-1d<Enter>:+1,/./-1d<Enter>:nohlsearch<Enter>k
-" Corrects current word spelling with the first suggestion
-map <Leader>s       1z=
-" Formats current paragraph
-map <Leader>p       gwap
-
 map <F1>  :NERDTreeToggle<Enter>
 map <F2>  :write<Enter>
 map <F3>  :nohlsearch<Enter>
@@ -104,3 +94,53 @@ map <F9>  :checktime<Enter>
 map <F10> :DiffChangesDiffToggle<Enter>
 map <F11> :w!<Enter>:!aspell check %<Enter>:w %<Enter>
 map <F12> :SpellThis<Enter>
+
+" Corrects current word spelling with the first suggestion
+map <Leader>s 1z=
+" Formats current paragraph
+map <Leader>p gwap
+" Adds spaces around current block of lines
+map <silent> <Leader><Space> :call <SID>AddSpaces()<Enter>
+" Removes spaces around current block of lines
+map <silent> <Leader><BS>    :call <SID>RemoveSpaces()<Enter>
+" Collapses current block of blank lines to one
+map <silent> <Leader><Del>   :call <SID>CollapseSpaces()<Enter>
+
+function <SID>AddSpaces() range
+	let separation = 2
+	let blanks     = repeat([''], separation)
+	call append(a:lastline, blanks)
+	call append(a:firstline - 1, blanks)
+endfunction
+
+function <SID>RemoveSpaces()
+	if getline('.') == ''
+		let fromline = prevnonblank(line('.')) + 1
+		let toline   = nextnonblank(line('.')) - 1
+		silent execute fromline . ',' . toline . 'delete'
+		return
+	endif
+
+	mark '
+	let toline = search('^$', 'bn')
+	if toline != 0
+		let fromline = prevnonblank(toline) + 1
+		silent execute fromline . ',' . toline . 'delete'
+	endif
+
+	normal "g''"
+	let fromline = search('^$', 'n')
+	if fromline != 0
+		let toline = nextnonblank(fromline) - 1
+		silent execute fromline . ',' . toline . 'delete'
+	endif
+	normal "g''"
+	mark '
+endfunction
+
+function <SID>CollapseSpaces() range
+	if getline('.') != ''
+		return
+	endif
+	" XXX XXX XXX
+endfunction
