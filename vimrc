@@ -117,7 +117,7 @@ function <SID>RemoveSpaces()
 	if getline('.') == ''
 		let fromline = prevnonblank(line('.')) + 1
 		let toline   = nextnonblank(line('.')) - 1
-		silent execute fromline . ',' . toline . 'delete'
+		call s:DeleteLines(fromline, toline)
 		return
 	endif
 
@@ -125,22 +125,37 @@ function <SID>RemoveSpaces()
 	let toline = search('^$', 'bn')
 	if toline != 0
 		let fromline = prevnonblank(toline) + 1
-		silent execute fromline . ',' . toline . 'delete'
+		call s:DeleteLines(fromline, toline)
 	endif
 
 	normal "g''"
 	let fromline = search('^$', 'n')
 	if fromline != 0
 		let toline = nextnonblank(fromline) - 1
-		silent execute fromline . ',' . toline . 'delete'
+		call s:DeleteLines(fromline, toline)
 	endif
 	normal "g''"
 	mark '
 endfunction
 
-function <SID>CollapseSpaces() range
+function <SID>CollapseSpaces()
 	if getline('.') != ''
 		return
 	endif
-	" XXX XXX XXX
+
+	if line('.') > 1 && getline(line('.') - 1) == ''
+		let toline   = line('.') - 1
+		let fromline = prevnonblank(toline) + 1
+		call s:DeleteLines(fromline, toline)
+	endif
+
+	if line('.') < line('$') && getline(line('.') + 1) == ''
+		let fromline = line('.') + 1
+		let toline   = nextnonblank(fromline) - 1
+		call s:DeleteLines(fromline, toline)
+	endif
+endfunction
+
+function s:DeleteLines(fromline, toline)
+	silent execute a:fromline . ',' . a:toline . 'delete'
 endfunction
