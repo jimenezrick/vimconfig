@@ -1,5 +1,15 @@
+   _    ___
+  | |  / (_)___ ___
+  | | / / / __ `__ \
+  | |/ / / / / / / /
+  |___/_/_/ /_/ /_/
+======================
+
+F*ck yeah!
+
+
  How to use this repository
-============================
+----------------------------
 
 1. cd $HOME
 2. git clone <repository> .vim
@@ -17,20 +27,16 @@ separate repositories.
  Working with Git submodules
 -----------------------------
 
-- To add a new submodule run from top level directory:
+- To add a new submodule run from the top level directory:
 
 	git submodule add <repository> bundle/<plugin>
 
-- To pull the latest revision of a submodule run from top level directory:
+- To pull a submodule repository run from the top level directory:
 
 	git submodule init
 	git submodule update
 
-- When the remote repository of one of the submodules is updated with
-  new commits, these will not be automatically pulled to our plugins
-  directories. So go to some plugin directory controlled as a submodule
-  and run there:
+- To update all the submodule repositories in one shot run from the top
+  level directory, commit afterwards:
 
-	git pull
-
-  (Then go to top level directory and commit changes)
+	git submodule foreach 'git pull'
