@@ -155,6 +155,6 @@ endfunction
 function s:DeleteLines(fromline, toline)
 	mark `
 	silent execute a:fromline . ',' . a:toline . 'delete'
-	normal "g``"
+	normal g``
 	mark `
 endfunction
