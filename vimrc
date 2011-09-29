@@ -121,21 +121,17 @@ function <SID>RemoveSpaces()
 		return
 	endif
 
-	mark '
 	let toline = search('^$', 'bn')
 	if toline != 0
 		let fromline = prevnonblank(toline) + 1
 		call s:DeleteLines(fromline, toline)
 	endif
 
-	normal "g''"
 	let fromline = search('^$', 'n')
 	if fromline != 0
 		let toline = nextnonblank(fromline) - 1
 		call s:DeleteLines(fromline, toline)
 	endif
-	normal "g''"
-	mark '
 endfunction
 
 function <SID>CollapseSpaces()
@@ -157,5 +153,8 @@ function <SID>CollapseSpaces()
 endfunction
 
 function s:DeleteLines(fromline, toline)
+	mark '
 	silent execute a:fromline . ',' . a:toline . 'delete'
+	normal "g''"
+	mark '
 endfunction
