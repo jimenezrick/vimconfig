@@ -19,3 +19,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
+[submodule "bundle/diffchanges"]
+	path = bundle/diffchanges
+	url = git://github.com/jmcantrell/vim-diffchanges.git
