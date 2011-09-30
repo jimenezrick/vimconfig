@@ -56,18 +56,22 @@ autocmd FileType haskell,ocaml setlocal expandtab tabstop=4 shiftwidth=4
 autocmd FileType tex,mail setlocal textwidth=72 spell
 autocmd BufNewFile,BufRead README,*.txt,*.markdown,*.md setlocal textwidth=72 colorcolumn=+1 spell
 
-" Use omni completion with `CTRL-X + CTRL-O', create the system tags file with:
+" OmniCppComplete plugin:
+"
+" Use omni completion with CTRL-X + CTRL-O, create the system tags file with:
 " ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -f ~/.vim/systags /usr/include /usr/local/include
 autocmd FileType c,cpp setlocal tags+=~/.vim/systags
 autocmd FileType cpp setlocal tags+=~/.vim/bundle/tags-cpp-stl/tags-cpp-stl
+" Auto-close preview window
+autocmd FileType c,cpp autocmd CursorMovedI,InsertLeave * if pumvisible() == 0 | pclose | endif
 
-" Vimerl customization
+" Vimerl plugin:
 let erlang_show_errors = 0
 let erlang_man_path    = '/usr/local/lib/erlang/man'
 let erlang_skel_header = {'author': 'Ricardo Catalinas Jiménez <jimenezrick@gmail.com>',
 		       \  'owner' : 'Ricardo Catalinas Jiménez'}
 
-" Tag List customization
+" Tag List plugin:
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_Enable_Fold_Column      = 0
 let Tlist_Use_Right_Window        = 1
@@ -75,7 +79,7 @@ let Tlist_Exit_OnlyWindow         = 1
 let tlist_ocaml_settings          = 'ocaml;c:class;m:object method;M:module;v:global scope;t:type;' .
 				  \ 'f:function;C:constructor;r:structure field;e:exception'
 
-" Syntastic customization
+" Syntastic plugin:
 let syntastic_enable_signs       = 1
 let syntastic_auto_loc_list      = 1
 let syntastic_disabled_filetypes = ['c', 'cpp', 'erlang', 'python', 'haskell', 'ocaml', 'tex', 'sh']
