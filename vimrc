@@ -53,8 +53,8 @@ autocmd FileType cpp setlocal foldmethod=syntax foldnestmax=2 cinoptions=h0
 autocmd FileType erlang setlocal foldmethod=expr expandtab tabstop=4 shiftwidth=4
 autocmd FileType python setlocal foldmethod=indent
 autocmd FileType haskell,ocaml setlocal expandtab tabstop=4 shiftwidth=4
-autocmd FileType tex,mail setlocal textwidth=72 spell
-autocmd BufNewFile,BufRead README,*.txt,*.markdown,*.md setlocal textwidth=72 colorcolumn=+1 spell
+autocmd BufEnter *.txt,README,TODO,*.markdown,*.md if &filetype == '' | setlocal filetype=txt | endif
+autocmd FileType txt,tex,mail setlocal textwidth=72 colorcolumn=+1 spell
 
 " OmniCppComplete plugin:
 "
