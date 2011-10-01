@@ -48,11 +48,9 @@ set sidescrolloff=6
 set nospell
 set spelllang=es,en
 
-autocmd FileType c setlocal foldmethod=syntax
-autocmd FileType cpp setlocal foldmethod=syntax foldnestmax=2 cinoptions=h0
-autocmd FileType erlang setlocal foldmethod=expr expandtab tabstop=4 shiftwidth=4
-autocmd FileType python setlocal foldmethod=indent
-autocmd FileType haskell,ocaml setlocal expandtab tabstop=4 shiftwidth=4
+autocmd FileType c,cpp        setlocal foldmethod=syntax foldnestmax=2 cinoptions=(0,h0,N-s
+autocmd FileType erlang,ocaml setlocal foldmethod=expr expandtab tabstop=4 shiftwidth=4
+autocmd FileType python       setlocal foldmethod=indent
 autocmd BufEnter *.txt,README,TODO,*.markdown,*.md if &filetype == '' | setlocal filetype=txt | endif
 autocmd FileType txt,tex,mail setlocal textwidth=72 colorcolumn=+1 spell
 
@@ -82,7 +80,7 @@ let tlist_ocaml_settings          = 'ocaml;c:class;m:object method;M:module;v:gl
 " Syntastic plugin:
 let syntastic_enable_signs       = 1
 let syntastic_auto_loc_list      = 1
-let syntastic_disabled_filetypes = ['c', 'cpp', 'erlang', 'python', 'haskell', 'ocaml', 'tex', 'sh']
+let syntastic_disabled_filetypes = ['c', 'cpp', 'erlang', 'ocaml', 'python', 'tex', 'sh']
 
 match Todo /TODO\|FIXME\|XXX\|FUCKME/
 
