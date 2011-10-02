@@ -101,6 +101,12 @@ map <F12> :SpellThis<Enter>
 map <Leader>s 1z=
 " Formats current paragraph
 map <Leader>p gwap
+
+" Use Tabular plugin to align variable assignments
+map <Leader>t=       :Tabularize /=<Enter>
+" Use Tabular plugin to align variable declarations
+map <Leader>t<Space> :Tabularize /\s\*\\|\s/l0r0<Enter>
+
 " Adds spaces around current block of lines
 map <silent> <Leader><Space> :call <SID>AddSpaces()<Enter>
 " Removes spaces around current block of lines
