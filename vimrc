@@ -167,7 +167,8 @@ function <SID>CollapseSpaces()
 endfunction
 
 function s:DeleteLines(fromline, toline, ...)
-	silent execute a:fromline . ',' . a:toline . 'delete'
+	let toline = a:toline < 1 ? line('$') : a:toline
+	silent execute a:fromline . ',' . toline . 'delete'
 	if a:0 == 0 || a:0 == 1 && a:1
 		normal ``
 	endif
