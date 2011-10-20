@@ -48,7 +48,7 @@ set sidescrolloff=6
 set nospell
 set spelllang=es,en
 
-autocmd FileType c,cpp        setlocal foldmethod=syntax foldnestmax=2 cinoptions=(0,h0,N-s
+autocmd FileType c,cpp        setlocal foldmethod=syntax foldnestmax=2 cinoptions=(0,h0
 autocmd FileType erlang,ocaml setlocal foldmethod=expr expandtab tabstop=4 shiftwidth=4
 autocmd FileType python       setlocal foldmethod=indent
 autocmd BufEnter *.txt,README,TODO,*.markdown,*.md if &filetype == '' | setlocal filetype=txt | endif
