@@ -54,7 +54,10 @@ autocmd FileType txt,tex,mail setlocal textwidth=72 colorcolumn=+1 spell
 " Clang Complete plugin:
 let g:clang_use_library     = 1
 let g:clang_complete_macros = 1
+autocmd FileType c,cpp highlight clear SpellBad   | highlight SpellBad ctermfg=white ctermbg=red
+autocmd FileType c,cpp highlight clear SpellLocal | highlight SpellLocal ctermfg=white ctermbg=blue
 autocmd FileType c,cpp map <buffer> <silent> <Leader>e :silent call g:ClangUpdateQuickFix()<Enter>
+autocmd FileType c,cpp map <buffer> <silent> <Leader>q :syntax clear SpellBad SpellLocal<Enter>
 
 " Vimerl plugin:
 let erlang_show_errors = 0
