@@ -1,6 +1,3 @@
-" IMPORTANT: Pathogen must start with filetype detection disabled
-"filetype off
-
 source ~/.vim/bundle/pathogen/autoload/pathogen.vim
 
 call pathogen#infect()
@@ -53,21 +50,6 @@ autocmd FileType erlang,ocaml setlocal foldmethod=expr expandtab tabstop=4 shift
 autocmd FileType python       setlocal foldmethod=indent
 autocmd BufEnter *.txt,README,TODO,*.markdown,*.md if &filetype == '' | setlocal filetype=txt | endif
 autocmd FileType txt,tex,mail setlocal textwidth=72 colorcolumn=+1 spell
-
-" OmniCppComplete plugin:
-"
-" Create directory tags with:
-" - C:   ctags -R .
-" - C++: ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
-"
-" Use classic omni completion for C
-autocmd FileType c     setlocal omnifunc=ccomplete#Complete
-" Use omni completion with CTRL-X + CTRL-O, create the system tags file with:
-" ctags -R --c++-kinds=+p --fields=+iaS --extra=+q -f ~/.vim/systags /usr/include /usr/local/include
-autocmd FileType c,cpp setlocal tags+=~/.vim/systags
-autocmd FileType cpp   setlocal tags+=~/.vim/bundle/tags-cpp-stl/tags-cpp-stl
-" Auto-close preview window
-autocmd FileType c,cpp autocmd CursorMovedI,InsertLeave <buffer> if pumvisible() == 0 | pclose | endif
 
 " Vimerl plugin:
 let erlang_show_errors = 0
