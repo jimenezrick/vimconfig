@@ -51,6 +51,11 @@ autocmd FileType python       setlocal foldmethod=indent
 autocmd BufEnter *.txt,README,TODO,*.markdown,*.md if &filetype == '' | setlocal filetype=txt | endif
 autocmd FileType txt,tex,mail setlocal textwidth=72 colorcolumn=+1 spell
 
+" Clang Complete plugin:
+let g:clang_use_library     = 1
+let g:clang_complete_macros = 1
+autocmd FileType c,cpp map <buffer> <silent> <Leader>e :silent call g:ClangUpdateQuickFix()<Enter>
+
 " Vimerl plugin:
 let erlang_show_errors = 0
 let erlang_man_path    = '/usr/local/lib/erlang/man'
