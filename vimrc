@@ -53,7 +53,7 @@ autocmd FileType txt,tex,mail setlocal textwidth=72 colorcolumn=+1 spell
 
 " Clang Complete plugin:
 let g:clang_use_library     = 1
-let g:clang_complete_auto   = 1
+let g:clang_complete_auto   = 0
 let g:clang_complete_macros = 1
 let g:clang_complete_copen  = 1
 autocmd FileType c,cpp setlocal completeopt=menuone
