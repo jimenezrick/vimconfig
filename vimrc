@@ -112,14 +112,14 @@ map <silent> <Leader><BS>    :call <SID>RemoveSpaces()<Enter>
 " Collapses current block of blank lines to one
 map <silent> <Leader><Del>   :call <SID>CollapseSpaces()<Enter>
 
-function <SID>AddSpaces() range
+function s:AddSpaces() range
 	let separation = 2
 	let blanks     = repeat([''], separation)
 	call append(a:lastline, blanks)
 	call append(a:firstline - 1, blanks)
 endfunction
 
-function <SID>RemoveSpaces()
+function s:RemoveSpaces()
 	if getline('.') == ''
 		let fromline = prevnonblank(line('.')) + 1
 		let toline   = nextnonblank(line('.')) - 1
@@ -140,7 +140,7 @@ function <SID>RemoveSpaces()
 	endif
 endfunction
 
-function <SID>CollapseSpaces()
+function s:CollapseSpaces()
 	if getline('.') != ''
 		return
 	endif
