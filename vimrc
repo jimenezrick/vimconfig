@@ -103,7 +103,7 @@ map <Leader>p gwap
 " Use Tabular plugin to align variable assignments
 map <Leader>t=       :Tabularize /^[^=]*\zs=<Enter>
 " Use Tabular plugin to align variable declarations
-map <Leader>t<Space> :Tabularize /^\s*\S*\zs\(\s\*\\|\s\)/l0r0<Enter>
+map <Leader>t<Space> :Tabularize /^\s*\S*\zs\(\s\*\\|\s&\\|\s\)/l0r0<Enter>
 
 " Adds spaces around current block of lines
 map <silent> <Leader><Space> :call <SID>AddSpaces()<Enter>
