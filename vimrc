@@ -13,8 +13,12 @@ set guioptions-=r
 set guioptions-=L
 set guioptions-=R
 
-if split(system('uname'))[0] == 'Darwin'
-	set guifont=Monaco:h10
+if has('gui_running')
+	if split(system('uname'))[0] == 'Darwin'
+		set guifont=Monaco:h10
+	else
+		colorscheme peaksea
+	endif
 elseif $TERM =~ 'xterm'
 	set t_Co=256
 	colorscheme zenburn
