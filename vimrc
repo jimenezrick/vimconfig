@@ -82,7 +82,8 @@ let tlist_ocaml_settings          = 'ocaml;c:class;m:object method;M:module;v:gl
 " Syntastic plugin:
 let syntastic_enable_signs       = 1
 let syntastic_auto_loc_list      = 1
-let syntastic_disabled_filetypes = ['c', 'cpp', 'erlang', 'ocaml', 'python', 'tex', 'sh']
+let syntastic_disabled_filetypes = ['c', 'cpp', 'erlang', 'ocaml', 'python', 'tex', 'sh',
+				 \  'cuda', 'css', 'html', 'xhtml', 'xml', 'xslt']
 
 match Todo /TODO\|FIXME\|XXX\|FUCKME/
 
