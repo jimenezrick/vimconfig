@@ -50,26 +50,30 @@ set nospell
 set spelllang=es,en
 
 autocmd FileType c,cpp        setlocal foldmethod=syntax foldnestmax=2 cinoptions=(0,h0
-autocmd FileType erlang,ocaml setlocal foldmethod=expr expandtab tabstop=4 shiftwidth=4
+autocmd FileType erlang,ocaml setlocal expandtab tabstop=4 shiftwidth=4
 autocmd FileType python       setlocal foldmethod=indent
 autocmd BufEnter *.txt,README,TODO,*.markdown,*.md if &filetype == '' | setlocal filetype=txt | endif
 autocmd FileType txt,tex,mail,asciidoc setlocal textwidth=72 colorcolumn=+1 spell
 
 " Clang Complete plugin:
-let g:clang_use_library     = 1
-let g:clang_complete_auto   = 0
-let g:clang_complete_macros = 1
-let g:clang_complete_copen  = 1
+let clang_use_library     = 1
+let clang_complete_auto   = 0
+let clang_complete_macros = 1
+let clang_complete_copen  = 1
 autocmd FileType c,cpp setlocal completeopt=menuone
 autocmd FileType c,cpp highlight clear SpellBad   | highlight SpellBad ctermfg=white ctermbg=red
 autocmd FileType c,cpp highlight clear SpellLocal | highlight SpellLocal ctermfg=white ctermbg=blue
-autocmd FileType c,cpp map <buffer> <silent> <Leader>e :silent call g:ClangUpdateQuickFix()<Enter>
+autocmd FileType c,cpp map <buffer> <silent> <Leader>e :silent call ClangUpdateQuickFix()<Enter>
 
 " Vimerl plugin:
+let erlang_folding     = 1
 let erlang_show_errors = 0
 let erlang_man_path    = '/usr/local/lib/erlang/man'
 let erlang_skel_header = {'author': 'Ricardo Catalinas Jiménez <jimenezrick@gmail.com>',
 		       \  'owner' : 'Ricardo Catalinas Jiménez'}
+
+" OCaml plugin:
+let ocaml_folding = 1
 
 " Tag List plugin:
 let Tlist_GainFocus_On_ToggleOpen = 1
