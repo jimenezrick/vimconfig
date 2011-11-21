@@ -75,14 +75,6 @@ let erlang_skel_header = {'author': 'Ricardo Catalinas Jiménez <jimenezrick@gma
 " OCaml plugin:
 let ocaml_folding = 1
 
-" Tag List plugin:
-let Tlist_GainFocus_On_ToggleOpen = 1
-let Tlist_Enable_Fold_Column      = 0
-let Tlist_Use_Right_Window        = 1
-let Tlist_Exit_OnlyWindow         = 1
-let tlist_ocaml_settings          = 'ocaml;c:class;m:object method;M:module;v:global scope;t:type;' .
-				  \ 'f:function;C:constructor;r:structure field;e:exception'
-
 " Syntastic plugin:
 let syntastic_enable_signs       = 1
 let syntastic_auto_loc_list      = 1
