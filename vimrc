@@ -171,6 +171,7 @@ function s:ToggleAutoHighlight()
 	if exists('#auto_highlight')
 		autocmd! auto_highlight
 		augroup! auto_highlight
+		augroup END
 		set updatetime&
 		return 0
 	else
