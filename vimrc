@@ -89,6 +89,7 @@ map <F2>  :write<Enter>
 map <F3>  :nohlsearch<Enter>
 map <F4>  :make<Enter>
 map <F5>  :shell<Enter>
+map <F6>  :if <SID>ToggleAutoHighlight()<Bar>setlocal hlsearch<Bar>else<Bar>setlocal nohlsearch<Bar>endif<Enter>
 map <F7>  :TagbarToggle<Enter>
 map <F8>  :vimgrep /TODO\\|FIXME\\|XXX\\|FUCKME/ %<Enter>:copen<Enter>
 map <F9>  :checktime<Enter>
@@ -163,5 +164,21 @@ function s:DeleteLines(fromline, toline, ...)
 	silent execute a:fromline . ',' . toline . 'delete'
 	if a:0 == 0 || a:0 == 1 && a:1
 		normal ``
+	endif
+endfunction
+
+function s:ToggleAutoHighlight()
+	if exists('#auto_highlight')
+		autocmd! auto_highlight
+		augroup! auto_highlight
+		setlocal updatetime&
+		return 0
+	else
+		augroup auto_highlight
+			autocmd!
+			autocmd CursorHold * let @/ = '\V\<' . escape(expand('<cword>'), '\') . '\>'
+		augroup END
+		setlocal updatetime=500
+		return 1
 	endif
 endfunction
