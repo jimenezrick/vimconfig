@@ -88,11 +88,9 @@ map <F2>  :write<Enter>
 map <F3>  :nohlsearch<Enter>
 map <F4>  :make<Enter>
 map <F5>  :shell<Enter>
-map <F6>  :TlistToggle<Enter>
 map <F7>  :TagbarToggle<Enter>
 map <F8>  :vimgrep /TODO\\|FIXME\\|XXX\\|FUCKME/ %<Enter>:copen<Enter>
 map <F9>  :checktime<Enter>
-map <F10> :DiffChangesDiffToggle<Enter>
 map <F11> :w!<Enter>:!aspell check %<Enter>:w %<Enter>
 map <F12> :SpellThis<Enter>
 
