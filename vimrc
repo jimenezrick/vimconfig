@@ -48,6 +48,7 @@ set scrolloff=1
 set sidescrolloff=6
 set nospell
 set spelllang=es,en
+set path+=/usr/local/include,**
 
 autocmd FileType c,cpp        setlocal foldmethod=syntax foldnestmax=2 cinoptions=(0,h0
 autocmd FileType erlang,ocaml setlocal expandtab tabstop=4 shiftwidth=4
@@ -88,7 +89,6 @@ map <F2>  :write<Enter>
 map <F3>  :nohlsearch<Enter>
 map <F4>  :make<Enter>
 map <F5>  :shell<Enter>
-map <F6>  :edit **/<cfile><Enter>
 map <F7>  :TagbarToggle<Enter>
 map <F8>  :vimgrep /TODO\\|FIXME\\|XXX\\|FUCKME/ %<Enter>:copen<Enter>
 map <F9>  :checktime<Enter>
