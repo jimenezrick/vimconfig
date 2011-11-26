@@ -88,6 +88,7 @@ map <F2>  :write<Enter>
 map <F3>  :nohlsearch<Enter>
 map <F4>  :make<Enter>
 map <F5>  :shell<Enter>
+map <F6>  :edit **/<cfile><Enter>
 map <F7>  :TagbarToggle<Enter>
 map <F8>  :vimgrep /TODO\\|FIXME\\|XXX\\|FUCKME/ %<Enter>:copen<Enter>
 map <F9>  :checktime<Enter>
