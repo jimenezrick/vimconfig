@@ -24,7 +24,7 @@
 	url = git://github.com/Rip-Rip/clang_complete.git
 [submodule "bundle/pydoc"]
 	path = bundle/pydoc
-	url = git://github.com/fs111/pydoc.vim.git
+	url = git://github.com/jimenezrick/pydoc.vim.git
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
