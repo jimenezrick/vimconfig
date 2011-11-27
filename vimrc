@@ -49,6 +49,7 @@ set sidescrolloff=6
 set nospell
 set spelllang=es,en
 set path+=/usr/local/include,**
+set pastetoggle=<F10>
 
 autocmd FileType c,cpp        setlocal foldmethod=syntax foldnestmax=2 cinoptions=(0,h0
 autocmd FileType erlang,ocaml setlocal expandtab tabstop=4 shiftwidth=4
