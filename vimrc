@@ -65,7 +65,7 @@ let clang_complete_copen  = 1
 autocmd FileType c,cpp setlocal completeopt=menuone
 autocmd FileType c,cpp highlight clear SpellBad   | highlight SpellBad ctermfg=white ctermbg=red
 autocmd FileType c,cpp highlight clear SpellLocal | highlight SpellLocal ctermfg=white ctermbg=blue
-autocmd FileType c,cpp map <buffer> <silent> <Leader>e :silent call g:ClangUpdateQuickFix()<Enter>
+autocmd FileType c,cpp map <buffer> <silent> <Leader>e :call g:ClangUpdateQuickFix()<Enter>
 
 " Vimerl plugin:
 let erlang_folding     = 1
