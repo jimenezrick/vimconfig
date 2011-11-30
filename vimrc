@@ -16,14 +16,12 @@ set guioptions-=R
 if has('gui_running')
 	if split(system('uname'))[0] == 'Darwin'
 		set guifont=Monaco:h10
-	else
-		colorscheme peaksea
 	endif
 elseif $TERM =~ 'xterm'
 	set t_Co=256
 	colorscheme zenburn
 elseif $TERM =~ 'rxvt-unicode'
-	colorscheme miromiro
+	colorscheme riri
 endif
 
 set nocompatible
