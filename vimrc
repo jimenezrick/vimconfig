@@ -19,7 +19,7 @@ if has('gui_running')
 	endif
 elseif $TERM =~ 'xterm'
 	set t_Co=256
-	colorscheme zenburn
+	colorscheme peaksea
 elseif $TERM =~ 'rxvt-unicode'
 	colorscheme riri
 endif
