@@ -23,15 +23,15 @@ hi Comment      ctermfg=darkblue
 hi String       ctermfg=160
 hi Number       ctermfg=27
 hi Constant     ctermfg=163
-hi Statement    ctermfg=232       cterm=bold
+hi Statement    ctermfg=16       cterm=bold
 hi PreProc      ctermfg=blue
-hi Type         ctermfg=darkgreen
+hi Type         ctermfg=28
 hi StorageClass ctermfg=red
 hi Special      ctermfg=darkcyan
 hi Function     ctermfg=red
 hi Error        ctermbg=160
 hi Todo         ctermbg=120
-hi Search       ctermbg=162
+hi Search       ctermfg=231      ctermbg=162
 hi ColorColumn  ctermbg=195
 
 if version >= 700
