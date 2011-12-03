@@ -12,7 +12,7 @@ endif
 
 let g:colors_name = "riri"
 
-hi Normal       ctermfg=NONE     ctermbg=NONE
+hi Normal       ctermfg=black    ctermbg=254
 hi ErrorMsg     ctermfg=NONE     ctermbg=220
 hi NonText      ctermfg=blue
 hi LineNr       ctermfg=darkblue
@@ -43,9 +43,9 @@ if version >= 700
 
 	hi Pmenu     ctermfg=125 ctermbg=white cterm=NONE
 	hi PmenuSel  ctermfg=125 ctermbg=white cterm=reverse
-	hi PmenuSbar ctermfg=254 ctermbg=white cterm=reverse
+	hi PmenuSbar ctermfg=252 ctermbg=white cterm=reverse
 
 	hi TabLine     ctermfg=125 ctermbg=white cterm=NONE
 	hi TabLineSel  ctermfg=125 ctermbg=white cterm=reverse
-	hi TabLineFill ctermfg=254 ctermbg=white cterm=reverse
+	hi TabLineFill ctermfg=252 ctermbg=white cterm=reverse
 endif
