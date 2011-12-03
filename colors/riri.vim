@@ -31,7 +31,7 @@ hi Special      ctermfg=darkcyan
 hi Function     ctermfg=red
 hi Error        ctermbg=160
 hi Todo         ctermbg=120
-hi Search       ctermfg=231      ctermbg=162
+hi Search       ctermfg=white    ctermbg=162
 hi ColorColumn  ctermbg=195
 
 if version >= 700
