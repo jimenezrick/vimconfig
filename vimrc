@@ -73,7 +73,7 @@ let erlang_skel_header = {'author': 'Ricardo Catalinas Jiménez <jimenezrick@gma
 		       \  'owner' : 'Ricardo Catalinas Jiménez'}
 
 " OCaml plugin:
-let ocaml_folding = 1
+"let ocaml_folding = 1
 
 " Syntastic plugin:
 let syntastic_enable_signs       = 1
