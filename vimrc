@@ -50,7 +50,7 @@ set path+=/usr/local/include,**
 set pastetoggle=<F10>
 
 autocmd FileType c,cpp        setlocal foldmethod=syntax foldnestmax=2 cinoptions=(0,h0
-autocmd FileType erlang,ocaml setlocal expandtab tabstop=4 shiftwidth=4
+autocmd FileType erlang,ocaml setlocal foldmethod=indent expandtab tabstop=4 shiftwidth=4
 autocmd FileType python       setlocal foldmethod=indent
 autocmd BufEnter *.txt,README,TODO,*.markdown,*.md if &filetype == '' | setlocal filetype=txt | endif
 autocmd FileType txt,tex,mail,asciidoc setlocal textwidth=72 colorcolumn=+1 spell
@@ -71,9 +71,6 @@ let erlang_show_errors = 0
 let erlang_man_path    = '/usr/local/lib/erlang/man'
 let erlang_skel_header = {'author': 'Ricardo Catalinas Jiménez <jimenezrick@gmail.com>',
 		       \  'owner' : 'Ricardo Catalinas Jiménez'}
-
-" OCaml plugin:
-"let ocaml_folding = 1
 
 " Syntastic plugin:
 let syntastic_enable_signs       = 1
