@@ -1,11 +1,12 @@
 " Vim color file
 " Author:  Ricardo Catalinas Jiménez <jimenezrick@gmail.com>
-" Version: 2011/12/01
+" Version: 2011/12/05
 "
-" Color scheme for 256 colors terminals
+" Light and high contrast color scheme for 256 colors terminals.
 
 set background=light
 hi clear
+
 if exists("syntax_on")
 	syntax reset
 endif
@@ -18,6 +19,9 @@ hi NonText      ctermfg=blue
 hi LineNr       ctermfg=darkblue
 hi StatusLine   ctermfg=white    ctermbg=125 cterm=bold
 hi StatusLineNC ctermfg=white    ctermbg=125 cterm=reverse
+hi Visual       ctermfg=white    ctermbg=93
+hi Search       ctermfg=white    ctermbg=162
+hi ColorColumn  ctermbg=195
 
 hi Comment      ctermfg=darkblue
 hi String       ctermfg=160
@@ -31,8 +35,6 @@ hi Special      ctermfg=darkcyan
 hi Function     ctermfg=red
 hi Error        ctermbg=160
 hi Todo         ctermbg=120
-hi Search       ctermfg=white    ctermbg=162
-hi ColorColumn  ctermbg=195
 
 if version >= 700
 	hi MatchParen ctermbg=81
