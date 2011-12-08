@@ -29,7 +29,7 @@ hi Number       ctermfg=27
 hi Constant     ctermfg=163
 hi Statement    ctermfg=16       cterm=bold
 hi PreProc      ctermfg=blue
-hi Type         ctermfg=28
+hi Type         ctermfg=28       cterm=bold
 hi StorageClass ctermfg=red
 hi Special      ctermfg=darkcyan
 hi Function     ctermfg=red
