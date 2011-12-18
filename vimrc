@@ -68,7 +68,6 @@ autocmd FileType c,cpp map <buffer> <silent> <Leader>e :call g:ClangUpdateQuickF
 " Vimerl plugin:
 let erlang_folding     = 1
 let erlang_show_errors = 0
-let erlang_man_path    = '/usr/local/lib/erlang/man'
 let erlang_skel_header = {'author': 'Ricardo Catalinas Jiménez <jimenezrick@gmail.com>',
 		       \  'owner' : 'Ricardo Catalinas Jiménez'}
 
