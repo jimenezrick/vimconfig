@@ -72,10 +72,8 @@ let erlang_skel_header = {'author': 'Ricardo Catalinas Jiménez <jimenezrick@gma
 		       \  'owner' : 'Ricardo Catalinas Jiménez'}
 
 " Syntastic plugin:
-let syntastic_enable_signs       = 1
-let syntastic_auto_loc_list      = 1
-let syntastic_disabled_filetypes = ['c', 'cpp', 'erlang', 'ocaml', 'python', 'tex', 'sh',
-				 \  'cuda', 'css', 'html', 'xhtml', 'xml', 'xslt']
+let syntastic_auto_loc_list = 1
+let syntastic_mode_map      = {'mode': 'passive'}
 
 match Todo /TODO\|FIXME\|XXX\|FUCKME/
 
