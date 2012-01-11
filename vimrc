@@ -13,9 +13,9 @@ set guioptions-=r
 set guioptions-=L
 set guioptions-=R
 
-if has('gui_running')
-	if split(system('uname'))[0] == 'Darwin'
-		set guifont=Monaco:h10
+if split(system('uname'))[0] == 'Darwin'
+	if has('gui_running')
+		set guifont=Monaco:h11
 	endif
 elseif $TERM =~ 'xterm'
 	set t_Co=256
