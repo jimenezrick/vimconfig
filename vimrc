@@ -53,7 +53,7 @@ autocmd FileType c,cpp        setlocal foldmethod=syntax foldnestmax=2 cinoption
 autocmd FileType erlang,ocaml setlocal foldmethod=indent expandtab tabstop=4 shiftwidth=4
 autocmd FileType python       setlocal foldmethod=indent
 autocmd BufEnter *.txt,README,TODO,*.markdown,*.md if &filetype == '' | setlocal filetype=txt | endif
-autocmd FileType txt,tex,mail,asciidoc setlocal textwidth=72 formatoptions+=a2l colorcolumn=+1 spell
+autocmd FileType txt,tex,mail,asciidoc setlocal textwidth=72 formatoptions+=2l colorcolumn=+1 spell
 autocmd FileType help         setlocal nospell
 
 " Clang Complete plugin:
