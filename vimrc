@@ -61,8 +61,6 @@ let clang_use_library     = 1
 let clang_complete_auto   = 0
 let clang_complete_macros = 1
 let clang_complete_copen  = 1
-" FIXME: Workaround for https://github.com/Rip-Rip/clang_complete/issues/109
-let clang_user_options    = '-I /usr/lib/clang/3.0/include'
 autocmd FileType c,cpp setlocal completeopt=menuone
 autocmd FileType c,cpp highlight clear SpellBad   | highlight SpellBad ctermfg=white ctermbg=red
 autocmd FileType c,cpp highlight clear SpellLocal | highlight SpellLocal ctermfg=white ctermbg=blue
