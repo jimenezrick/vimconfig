@@ -124,13 +124,13 @@ function s:RemoveSpaces()
 		return
 	endif
 
-	let toline = search('^$', 'bn')
+	let toline = search('^$', 'bnW')
 	if toline != 0
 		let fromline = prevnonblank(toline) + 1
 		call s:DeleteLines(fromline, toline)
 	endif
 
-	let fromline = search('^$', 'n')
+	let fromline = search('^$', 'nW')
 	if fromline != 0
 		let toline = nextnonblank(fromline) - 1
 		call s:DeleteLines(fromline, toline)
