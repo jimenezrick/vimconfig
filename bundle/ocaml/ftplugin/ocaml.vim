@@ -7,12 +7,12 @@
 "              Vincent Aravantinos <firstname.name@imag.fr>
 " URL:         http://www.ocaml.info/vim/ftplugin/ocaml.vim
 " Last Change:
+"              2012 Feb 08 - Paste types to unnamed register (PV)
 "              2012 Jan 15 - Bugfix :reloading .annot file does not close
 "              splitted view (Pierre Vittet)
 "              2011 Nov 28 - Bugfix + support of multiple ml annotation file
 "              (Pierre Vittet)
 "              2010 Jul 10 - Bugfix, thanks to Pat Rondon
-"              2008 Jul 17 - Bugfix related to fnameescape (VA)
 
 if exists("b:did_ftplugin")
   finish
@@ -554,6 +554,19 @@ endfunction
       return s:Extract_type_data(s:Block_pattern(lin1,lin2,col1,col2), a:annot_file_name)
     endfun
 
+      "In: A string destined to be printed in the 'echo buffer'. It has line
+      "break and 2 space at each line beginning.
+      "Out: A string destined to be yanked, without space and double space.
+    function s:unformat_ocaml_type(res)
+      "Remove end of line.
+      let res = substitute (a:res, "\n", "", "g" )
+      "remove double space
+      let res =substitute(res , "  ", " ", "g")
+      "remove space at begining of string.
+      let res = substitute(res, "^ *", "", "g")
+      return res
+    endfunction
+
   "d. main
       "In:         the current mode (eg. "visual", "normal", etc.)
       "After call: the type information is displayed
@@ -562,7 +575,10 @@ endfunction
         let annot_file_name = s:Fnameescape(expand('%:t:r')).'.annot'
         call s:Locate_annotation()
         call s:Load_annotation(annot_file_name)
-        return s:Get_type(a:mode, annot_file_name)
+        let res = s:Get_type(a:mode, annot_file_name)
+        " Copy result in the unnamed buffer
+        let @" = s:unformat_ocaml_type(res)
+        return res
       endfun
     endif
 
@@ -570,7 +586,8 @@ endfunction
       function Ocaml_get_type_or_not(mode)
         let t=reltime()
         try
-          return Ocaml_get_type(a:mode)
+          let res = Ocaml_get_type(a:mode)
+          return res 
         catch
           return ""
         endtry
