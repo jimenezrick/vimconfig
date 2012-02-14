@@ -22,6 +22,7 @@ hi StatusLineNC ctermfg=white    ctermbg=125 cterm=reverse
 hi Visual       ctermfg=white    ctermbg=93
 hi Search       ctermfg=white    ctermbg=162
 hi ColorColumn  ctermbg=195
+hi CursorLine   ctermbg=253                  cterm=NONE
 
 hi Comment      ctermfg=darkblue
 hi String       ctermfg=160
