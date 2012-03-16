@@ -139,6 +139,10 @@ if exists("g:ocaml_folding")
   setlocal foldexpr=OMLetFoldLevel(v:lnum)
 endif
 
+let b:undo_ftplugin = "setlocal efm< foldmethod< foldexpr<"
+	\ . "| unlet! b:mw b:match_words b:match_ignorecase"
+
+
 " - Only definitions below, executed once -------------------------------------
 
 if exists("*OMLetFoldLevel")
