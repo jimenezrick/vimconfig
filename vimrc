@@ -53,7 +53,7 @@ autocmd BufEnter *.txt,README,TODO,*.markdown,*.md if &filetype == '' | setlocal
 autocmd BufEnter *.escript                         if &filetype == '' | setlocal filetype=erlang | endif
 
 autocmd FileType c,cpp        setlocal foldmethod=syntax foldnestmax=2 cinoptions=(0,h0
-autocmd FileType erlang,ocaml setlocal foldmethod=indent expandtab tabstop=4 shiftwidth=4
+autocmd FileType erlang,ocaml setlocal foldmethod=indent expandtab tabstop=4 shiftwidth=4 textwidth=0
 autocmd FileType python       setlocal foldmethod=indent
 autocmd FileType txt,tex,mail,asciidoc setlocal textwidth=72 formatoptions+=2l colorcolumn=+1 spell
 autocmd FileType help         setlocal nospell
