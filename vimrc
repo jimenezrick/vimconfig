@@ -58,6 +58,9 @@ autocmd FileType python       setlocal foldmethod=indent
 autocmd FileType txt,tex,mail,asciidoc setlocal textwidth=72 formatoptions+=2l colorcolumn=+1 spell
 autocmd FileType help         setlocal nospell
 
+" C plugin:
+let c_no_curly_error = 1 " For C++11 lambdas
+
 " Clang Complete plugin:
 let clang_use_library     = 1
 let clang_complete_auto   = 0
