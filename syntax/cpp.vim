@@ -35,11 +35,9 @@ syn keyword cppBoolean		true false
 
 " C++ 11 extensions
 if !exists("cpp_no_cpp11")
-  syn keyword cppOperator	alignof alignas decltype
-  syn keyword cppType		override final char16_t char32_t
+  syn keyword cppType		override final
   syn keyword cppExceptions	noexcept
-  syn keyword cppStorageClass	constexpr thread_local
-  syn keyword cppStatement	static_assert
+  syn keyword cppStorageClass	constexpr decltype
   syn keyword cppConstant	nullptr
 endif
 
