@@ -81,6 +81,10 @@ let erlang_skel_header = {'author': 'Ricardo Catalinas Jiménez <jimenezrick@gma
 let syntastic_auto_loc_list = 1
 let syntastic_mode_map      = {'mode': 'passive'}
 
+" Haskell mode plugin:
+autocmd Bufenter *.hs compiler ghc
+let haddock_browser = "/usr/bin/chromium"
+
 match Todo /TODO\|FIXME\|XXX\|FUCKME/
 
 map <silent> <F1>  :NERDTreeToggle<Enter>
