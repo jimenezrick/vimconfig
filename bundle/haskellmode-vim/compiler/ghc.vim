@@ -456,16 +456,13 @@ endfunction
 
 " no need to ask GHC about its supported languages and
 " options with every editing session. cache the info in
-" ~/.vim/haskellmode.config 
+" haskellmode.config file located in the same directory
+" as this script.
 " TODO: should we store more info (see haskell_doc.vim)?
 "       move to autoload?
 "       should we keep a history of GHC versions encountered?
 function! GHC_SaveConfig()
-  let vimdir = expand('~').'/'.'.vim'
-  let config = vimdir.'/haskellmode.config'
-  if !isdirectory(vimdir)
-    call mkdir(vimdir)
-  endif
+  let config = expand('<sfile>:p:h').'/haskellmode.config'
   let entries = ['-- '.g:ghc_version]
   for l in s:ghc_supported_languages
     let entries += [l]
@@ -480,8 +477,7 @@ endfunction
 " reuse cached GHC configuration info, if using the same
 " GHC version.
 function! GHC_LoadConfig()
-  let vimdir = expand('~').'/'.'.vim'
-  let config = vimdir.'/haskellmode.config'
+  let config = expand('<sfile>:p:h').'/haskellmode.config'
   if filereadable(config)
     let lines = readfile(config)
     if lines[0]=='-- '.g:ghc_version

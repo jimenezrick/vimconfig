@@ -112,21 +112,18 @@ if !exists('s:docdir') || !isdirectory(s:docdir)
   endif
 endif
 
-" todo: can we turn s:docdir into a list of paths, and
+" TODO: can we turn s:docdir into a list of paths, and
 " include docs for third-party libs as well?
 
 let s:libraries         = s:docdir . 'libraries/'
 let s:guide             = s:docdir . 'users_guide/'
 let s:index             = 'index.html'
 if exists("g:haddock_indexfiledir") && filewritable(g:haddock_indexfiledir)
-  let s:haddock_indexfiledir = g:haddock_indexfiledir 
+  let s:haddock_indexfiledir = g:haddock_indexfiledir
 elseif filewritable(s:libraries)
   let s:haddock_indexfiledir = s:libraries
-elseif filewritable($HOME)
-  let s:haddock_indexfiledir = $HOME.'/'
-else "give up
-  echoerr s:scriptname." can't locate index file. please set g:haddock_indexfiledir"
-  finish
+else
+  let s:haddock_indexfiledir = expand('<sfile>:p:h').'/'
 endif
 let s:haddock_indexfile = s:haddock_indexfiledir . 'haddock_index.vim'
 
