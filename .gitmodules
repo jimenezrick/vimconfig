@@ -31,3 +31,6 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
+[submodule "bundle/vim-filetype-haskell"]
+	path = bundle/vim-filetype-haskell
+	url = git://github.com/kana/vim-filetype-haskell.git
