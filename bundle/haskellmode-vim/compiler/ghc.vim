@@ -1,4 +1,3 @@
-
 " Vim Compiler File
 " Compiler:	GHC
 " Maintainer:	Claus Reinke <claus.reinke@talk21.com>
@@ -20,6 +19,12 @@ if !haskellmode#GHC() | finish | endif
 if (!exists("b:ghc_staticoptions"))
   let b:ghc_staticoptions = ''
 endif
+
+" no need to ask GHC about its supported languages and
+" options with every editing session. cache the info in
+" haskellmode.config file located in the same directory
+" as this script.
+let s:config = expand('<sfile>:p:h').'/haskellmode.config'
 
 " set makeprg (for quickfix mode) 
 execute 'setlocal makeprg=' . g:ghc . '\ ' . escape(b:ghc_staticoptions,' ') .'\ -e\ :q\ %'
@@ -454,15 +459,10 @@ function! GHC_MkImportsExplicit()
   call setpos('.', save_cursor)
 endfunction
 
-" no need to ask GHC about its supported languages and
-" options with every editing session. cache the info in
-" haskellmode.config file located in the same directory
-" as this script.
 " TODO: should we store more info (see haskell_doc.vim)?
 "       move to autoload?
 "       should we keep a history of GHC versions encountered?
 function! GHC_SaveConfig()
-  let config = expand('<sfile>:p:h').'/haskellmode.config'
   let entries = ['-- '.g:ghc_version]
   for l in s:ghc_supported_languages
     let entries += [l]
@@ -471,15 +471,14 @@ function! GHC_SaveConfig()
   for l in s:opts
     let entries += [l]
   endfor
-  call writefile(entries,config)
+  call writefile(entries,s:config)
 endfunction
 
 " reuse cached GHC configuration info, if using the same
 " GHC version.
 function! GHC_LoadConfig()
-  let config = expand('<sfile>:p:h').'/haskellmode.config'
-  if filereadable(config)
-    let lines = readfile(config)
+  if filereadable(s:config)
+    let lines = readfile(s:config)
     if lines[0]=='-- '.g:ghc_version
       let i=1
       let s:ghc_supported_languages = []
