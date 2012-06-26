@@ -167,7 +167,7 @@ CONTENTS                                                         *haskellmode*
     liking, you probably won't need to do any fine tuning.
 
                                                 *g:haddock_browser_callformat*
-    By default, the web browser|g:haddock_browser| will be started
+    By default, the web browser |g:haddock_browser| will be started
     asynchronously (in the background) on Windows or when vim is running in a
     GUI, and synchronously (in the foreground) otherwise. These settings seem
     to work fine if you are using a console mode browser (eg, when editing in
@@ -208,8 +208,8 @@ CONTENTS                                                         *haskellmode*
         :let g:wget="C:\Program Files\wget\wget.exe"
 <
 
-    Finally, the mappings actually use|<LocalLeader>|behind the scenes, so if
-    you have to, you can redefine|maplocalleader|to something other than '_'.
+    Finally, the mappings actually use |<LocalLeader>|behind the scenes, so if
+    you have to, you can redefine |maplocalleader|to something other than '_'.
     Just remember that the docs still refer to mappings starting with '_', to
     avoid confusing the majority of users!-)
 
@@ -232,7 +232,7 @@ CONTENTS                                                         *haskellmode*
     |:GHCReload| (if GHCi cannot load your file, the type info will be empty).
 
 
-    In addition to the standard|quickfix| commands, the GHC compiler plugin
+    In addition to the standard |quickfix| commands, the GHC compiler plugin
     provides:
 
                                                                   *:GHCReload*
