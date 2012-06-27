@@ -81,9 +81,9 @@ let erlang_skel_header = {'author': 'Ricardo Catalinas Jiménez <jimenezrick@gma
 let syntastic_auto_loc_list = 1
 let syntastic_mode_map      = {'mode': 'passive'}
 
-" Haskell mode plugin:
-autocmd Bufenter *.hs compiler ghc
-let haddock_browser = "/usr/bin/chromium"
+" Neco-GHC plugin:
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+let $PATH = $PATH . ':' . expand('~/.cabal/bin')
 
 match Todo /TODO\|FIXME\|XXX\|FUCKME/
 
