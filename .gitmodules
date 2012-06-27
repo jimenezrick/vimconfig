@@ -43,3 +43,6 @@
 [submodule "bundle/neco-ghc"]
 	path = bundle/neco-ghc
 	url = git://github.com/ujihisa/neco-ghc.git
+[submodule "bundle/lushtags"]
+	path = bundle/lushtags
+	url = git://github.com/jimenezrick/lushtags.git
