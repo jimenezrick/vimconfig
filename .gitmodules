@@ -22,9 +22,6 @@
 [submodule "bundle/clang_complete"]
 	path = bundle/clang_complete
 	url = git://github.com/Rip-Rip/clang_complete.git
-[submodule "bundle/pydoc"]
-	path = bundle/pydoc
-	url = git://github.com/jimenezrick/pydoc.vim.git
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
@@ -43,6 +40,3 @@
 [submodule "bundle/neco-ghc"]
 	path = bundle/neco-ghc
 	url = git://github.com/ujihisa/neco-ghc.git
-[submodule "bundle/lushtags"]
-	path = bundle/lushtags
-	url = git://github.com/jimenezrick/lushtags.git
