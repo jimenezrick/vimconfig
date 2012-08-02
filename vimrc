@@ -49,14 +49,15 @@ set spelllang=es,en
 set path+=/usr/local/include,**
 set pastetoggle=<F10>
 
-autocmd BufEnter *.txt,README,TODO,*.markdown,*.md if &filetype == '' | setlocal filetype=txt | endif
-autocmd BufEnter *.escript                         if &filetype == '' | setlocal filetype=erlang | endif
+autocmd BufEnter README,TODO if &filetype == '' | setlocal filetype=text | endif
+autocmd BufEnter *.escript   if &filetype == '' | setlocal filetype=erlang | endif
+autocmd BufEnter *.md        if &filetype == '' | setlocal filetype=markdown | endif
 
-autocmd FileType c,cpp                setlocal foldmethod=syntax foldnestmax=2 cinoptions=(0,g0,N-s
-autocmd FileType erlang,haskell,ocaml setlocal foldmethod=indent expandtab tabstop=4 shiftwidth=4 textwidth=0
-autocmd FileType python               setlocal foldmethod=indent
-autocmd FileType txt,tex,mail         setlocal textwidth=72 formatoptions+=2l colorcolumn=+1 spell
-autocmd FileType help                 setlocal nospell
+autocmd FileType c,cpp                  setlocal foldmethod=syntax foldnestmax=2 cinoptions=(0,g0,N-s
+autocmd FileType erlang,haskell,ocaml   setlocal foldmethod=indent expandtab tabstop=4 shiftwidth=4 textwidth=0
+autocmd FileType python                 setlocal foldmethod=indent
+autocmd FileType text,markdown,tex,mail setlocal textwidth=72 formatoptions+=2l colorcolumn=+1 spell
+autocmd FileType help                   setlocal nospell
 
 " C plugin:
 let c_no_curly_error = 1 " For C++11 lambdas
