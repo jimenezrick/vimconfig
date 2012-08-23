@@ -92,6 +92,11 @@ let $PATH = $PATH . ':' . expand('~/.cabal/bin')
 
 match Todo /TODO\|FIXME\|XXX\|FUCKME/
 
+map <Up>    {
+map <Down>  }
+map <Left>  [[
+map <Right> ][
+
 map <silent> <F1>  :NERDTreeToggle<Enter>
 map <silent> <F2>  :write<Enter>
 map <silent> <F3>  :nohlsearch<Enter>
