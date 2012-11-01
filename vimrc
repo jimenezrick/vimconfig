@@ -90,6 +90,18 @@ autocmd FileType haskell map <buffer> <silent> <Leader>t :GhcModType<Enter>
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 let $PATH = $PATH . ':' . expand('~/.cabal/bin')
 
+" Tagbar plugin:
+let g:tagbar_type_go = {
+	\ 'ctagstype': 'Go',
+	\ 'kinds'    : [
+		\ 'p:packages',
+		\ 'f:functions',
+		\ 'v:variables',
+		\ 't:types',
+		\ 'c:constants'
+	\ ]
+\ }
+
 match Todo /TODO\|FIXME\|XXX\|FUCKME/
 
 map <Up>    {
