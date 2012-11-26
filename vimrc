@@ -57,6 +57,7 @@ autocmd FileType c,cpp                  setlocal foldmethod=syntax foldnestmax=2
 autocmd FileType erlang,haskell,ocaml   setlocal expandtab tabstop=4 shiftwidth=4 textwidth=0
 autocmd FileType haskell,ocaml,python   setlocal foldmethod=indent
 autocmd FileType text,markdown,tex,mail setlocal textwidth=72 formatoptions+=2l colorcolumn=+1 spell
+autocmd FileType gitcommit              setlocal spell
 autocmd FileType help                   setlocal nospell
 
 " C plugin:
