@@ -14,7 +14,6 @@ set guioptions-=L
 set guioptions-=R
 
 if $TERM == 'xterm-256color'
-	set t_Co=256
 	colorscheme peaksea
 elseif $TERM == 'rxvt-unicode-256color'
 	colorscheme riri
