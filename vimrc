@@ -13,11 +13,7 @@ set guioptions-=r
 set guioptions-=L
 set guioptions-=R
 
-if split(system('uname'))[0] == 'Darwin'
-	if has('gui_running')
-		set guifont=Monaco:h11
-	endif
-elseif $TERM =~ 'xterm'
+if $TERM =~ 'xterm'
 	set t_Co=256
 	colorscheme peaksea
 elseif $TERM =~ 'rxvt-unicode'
