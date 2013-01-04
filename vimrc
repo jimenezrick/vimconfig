@@ -33,8 +33,9 @@ set incsearch
 set nowrap
 set list
 set listchars=tab:\|\ ,trail:·,precedes:<,extends:>
+set foldmethod=indent
+set foldnestmax=2
 set nofoldenable
-set foldnestmax=1
 set wildmenu
 set lazyredraw
 set scrolloff=1
@@ -48,7 +49,7 @@ autocmd BufEnter README,TODO,PLAN,BUGS if &filetype == '' | setlocal filetype=te
 autocmd BufEnter *.escript             if &filetype == '' | setlocal filetype=erlang | endif
 autocmd BufEnter *.md                  if &filetype == '' | setlocal filetype=markdown | endif
 
-autocmd FileType c,cpp                  setlocal foldmethod=syntax foldnestmax=2 cinoptions=(0,g0,N-s,:0
+autocmd FileType c,cpp                  setlocal foldmethod=syntax cinoptions=(0,g0,N-s,:0
 autocmd FileType go                     setlocal foldmethod=syntax formatoptions+=ro suffixesadd=.go
 autocmd FileType erlang,haskell         setlocal expandtab tabstop=4 shiftwidth=4
 autocmd FileType haskell,python         setlocal foldmethod=indent
