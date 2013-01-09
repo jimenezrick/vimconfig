@@ -125,9 +125,9 @@ map <silent> <Leader>s 1z=
 " Formats current paragraph
 map <silent> <Leader>p gwap
 
-" Use Tabular plugin to align variable assignments
+" Uses Tabular plugin to align variable assignments
 map <silent> <Leader>t=       :Tabularize /^[^=]*\zs=<Enter>
-" Use Tabular plugin to align variable declarations
+" Uses Tabular plugin to align variable declarations
 map <silent> <Leader>t<Space> :Tabularize /^\s*\S*\zs\(\s\*\\|\s&\\|\s\)/l0r0<Enter>
 
 " Adds spaces around current block of lines
@@ -136,6 +136,9 @@ map <silent> <Leader><Space> :call <SID>AddSpaces()<Enter>
 map <silent> <Leader><BS>    :call <SID>RemoveSpaces()<Enter>
 " Collapses current block of blank lines to one
 map <silent> <Leader><Del>   :call <SID>CollapseSpaces()<Enter>
+
+" Searches current word recursively in the current directory
+map <silent> <Leader>g :execute 'lgrep! -rFIsnw --exclude-dir=.git --exclude-dir=.hg --exclude=tags . -e ' . expand('<cword>') <Bar> lopen<Enter>
 
 function s:AddSpaces() range
 	let separation = 2
