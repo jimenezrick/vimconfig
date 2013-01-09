@@ -117,7 +117,7 @@ map <silent> <F4>  :make<Enter>
 map <silent> <F5>  :shell<Enter>
 map <silent> <F6>  :if <SID>ToggleAutoHighlight()<Bar>set hlsearch<Bar>else<Bar>nohlsearch<Bar>endif<Enter>
 map <silent> <F7>  :TagbarToggle<Enter>
-map <silent> <F8>  :vimgrep /TODO\\|FIXME\\|XXX\\|FUCKME/ %<Enter>:copen<Enter>
+map <silent> <F8>  :lvimgrep /TODO\\|FIXME\\|XXX\\|FUCKME/j %<Enter>:lopen<Enter>
 map <silent> <F9>  :checktime<Enter>
 map <silent> <F11> :w!<Enter>:!aspell check %<Enter>:w %<Enter>
 map <silent> <F12> :SpellThis<Enter>
