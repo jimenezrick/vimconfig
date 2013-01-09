@@ -138,7 +138,8 @@ map <silent> <Leader><BS>    :call <SID>RemoveSpaces()<Enter>
 map <silent> <Leader><Del>   :call <SID>CollapseSpaces()<Enter>
 
 " Searches current word recursively in the current directory
-map <silent> <Leader>g :silent execute 'lgrep! -rFIsnw --exclude-dir=.git --exclude-dir=.hg --exclude=tags . -e ' . expand('<cword>') <Bar> lopen <Bar> redraw!<Enter>
+map <silent> <Leader>g :silent execute 'lgrep! -rFIsnw --exclude-dir=.git --exclude-dir=.hg --exclude=tags . -e '
+	\ . expand('<cword>') <Bar> lopen <Bar> redraw!<Enter>
 
 function s:AddSpaces() range
 	let separation = 2
