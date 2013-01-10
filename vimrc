@@ -137,9 +137,9 @@ map <silent> <Leader><BS>    :call <SID>RemoveSpaces()<Enter>
 " Collapses current block of blank lines to one
 map <silent> <Leader><Del>   :call <SID>CollapseSpaces()<Enter>
 
-let grep_cmd = 'lgrep! -rFIs --exclude-dir=.git --exclude-dir=.hg --exclude=tags'
+let grep_cmd = 'lgrep! -rIs --exclude-dir=.git --exclude-dir=.hg --exclude=tags'
 " Searches current word recursively in the current directory
-map <silent> <Leader>g :silent execute grep_cmd '-w . -e' shellescape(expand('<cword>')) <Bar> lopen <Bar> redraw!<Enter>
+map <silent> <Leader>g :silent execute grep_cmd '-Fw . -e' shellescape(expand('<cword>')) <Bar> lopen <Bar> redraw!<Enter>
 " :Grep <pattern> <file>...
 command -nargs=+ -complete=tag Grep silent execute grep_cmd <q-args> | lopen | redraw!
 
