@@ -141,7 +141,7 @@ let grep_cmd = 'lgrep! -rIs --exclude-dir=.git --exclude-dir=.hg --exclude=tags'
 " Searches current word recursively in the current directory
 map <silent> <Leader>g :silent execute grep_cmd '-Fw . -e' shellescape(expand('<cword>')) <Bar> lopen <Bar> redraw!<Enter>
 " :Grep <pattern> <file>...
-command -nargs=+ -complete=tag Grep silent execute grep_cmd <q-args> | lopen | redraw!
+command -nargs=+ -complete=tag Grep silent execute grep_cmd '-E' <q-args> | lopen | redraw!
 
 function s:AddSpaces() range
 	let separation = 2
