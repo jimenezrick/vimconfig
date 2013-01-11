@@ -103,10 +103,8 @@ let tagbar_type_go = {
 
 match Todo /TODO\|FIXME\|XXX\|FUCKME/
 
-map <Up>    {
-map <Down>  }
-map <Left>  [[
-map <Right> ][
+map <C-j> 6j
+map <C-k> 6k
 
 map <silent> <F1>  :NERDTreeToggle<Enter>
 map <silent> <F2>  :write<Enter>
