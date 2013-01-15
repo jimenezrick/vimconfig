@@ -141,8 +141,8 @@ map <silent> <Leader>g :silent execute grep_cmd '-Fw . -e' shellescape(expand('<
 " :Grep <pattern> <file>...
 command -nargs=+ -complete=tag Grep silent execute grep_cmd '-E' <q-args> | lopen | redraw!
 
-" Shows double-spaces
-command Spaces silent normal /  /<Enter>
+" Shows double and trailing spaces
+command Spaces silent normal /  \|\s\+$/<Enter>
 
 function s:AddSpaces() range
 	let separation = 2
