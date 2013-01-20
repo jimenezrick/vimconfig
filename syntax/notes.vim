@@ -1,4 +1,4 @@
-﻿" Vim syntax file
+" Vim syntax file
 " Language: Notes
 " Author:   Ricardo Catalinas Jiménez <jimenezrick@gmail.com>
 " Version:  Sun Jan 20 00:28:04 CET 2013
