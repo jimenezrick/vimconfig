@@ -28,6 +28,9 @@ syntax match emphasis /\*.\{-1,}\*/ contains=emphasisMark
 syntax match emphasisMark contained /\*/ conceal
 highlight emphasis cterm=bold
 
+syntax region emphasisBlock matchgroup=Conceal concealends start='\*' end='\*'
+highlight emphasisBlock cterm=bold
+
 syntax match ruler /^-\{3,}$/ contains=rulerSymbol
 syntax match rulerSymbol contained /-/ conceal cchar=━
 highlight link rulerSymbol Comment
