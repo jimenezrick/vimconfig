@@ -106,6 +106,11 @@ match Todo /TODO\|FIXME\|XXX\|FUCKME/
 map <C-j> 6j
 map <C-k> 6k
 
+map <silent> <C-Up>    :wincmd k<Enter>
+map <silent> <C-Down>  :wincmd j<Enter>
+map <silent> <C-Left>  :wincmd h<Enter>
+map <silent> <C-Right> :wincmd l<Enter>
+
 map <silent> <F1>  :NERDTreeToggle<Enter>
 map <silent> <F2>  :write<Enter>
 map <silent> <F3>  :nohlsearch<Enter>
