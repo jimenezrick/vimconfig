@@ -120,7 +120,7 @@ map <silent> <F6>  :if <SID>ToggleAutoHighlight()<Bar>set hlsearch<Bar>else<Bar>
 map <silent> <F7>  :TagbarToggle<Enter>
 map <silent> <F8>  :lvimgrep /TODO\\|FIXME\\|XXX\\|FUCKME/j %<Enter>:lopen<Enter>
 map <silent> <F9>  :checktime<Enter>
-map <silent> <F11> :w!<Enter>:!aspell check %<Enter>:w %<Enter>
+map <silent> <F11> :Spaces<Enter>
 map <silent> <F12> :SpellThis<Enter>
 
 " Corrects current word spelling with the first suggestion
