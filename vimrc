@@ -45,8 +45,9 @@ set spelllang=es,en
 set path+=/usr/local/include,**
 set pastetoggle=<F10>
 
-autocmd BufEnter README,TODO,PLAN,BUGS if &filetype == '' | setlocal filetype=text | endif
-autocmd BufEnter *.md                  if &filetype == '' | setlocal filetype=markdown | endif
+autocmd BufEnter README,TODO,BUGS       setlocal filetype=text
+autocmd BufEnter PLAN,*.notes           setlocal filetype=notes
+autocmd BufEnter *.md                   setlocal filetype=markdown
 
 autocmd FileType c,cpp                  setlocal foldmethod=syntax cinoptions=(0,g0,N-s,:0
 autocmd FileType go                     setlocal foldmethod=syntax formatoptions+=ro suffixesadd=.go
