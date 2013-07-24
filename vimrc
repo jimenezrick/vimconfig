@@ -49,7 +49,7 @@ autocmd BufEnter README,TODO,BUGS       setlocal filetype=text
 autocmd BufEnter PLAN,*.notes           setlocal filetype=notes
 autocmd BufEnter *.md                   setlocal filetype=markdown
 
-autocmd FileType c,cpp                  setlocal foldmethod=syntax cinoptions=(0,g0,N-s,:0
+autocmd FileType c,cpp                  setlocal foldmethod=syntax cinoptions=g0,N-s,:0,l1,t0
 autocmd FileType go                     setlocal foldmethod=syntax formatoptions+=ro suffixesadd=.go
 autocmd FileType erlang,haskell         setlocal expandtab tabstop=4 shiftwidth=4
 autocmd FileType haskell,python         setlocal foldmethod=indent
