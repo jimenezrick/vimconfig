@@ -28,6 +28,7 @@ set relativenumber
 set ruler
 set showmatch
 set hlsearch
+set cursorline
 set autoindent
 set incsearch
 set nowrap
