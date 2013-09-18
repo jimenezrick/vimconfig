@@ -20,7 +20,7 @@ elseif $TERM == 'rxvt-unicode-256color'
 endif
 
 set nocompatible
-set history=100
+set history=500
 set title
 set nobackup
 set backspace=indent,eol,start
