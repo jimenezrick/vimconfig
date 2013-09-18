@@ -37,6 +37,7 @@ set listchars=tab:\|\ ,trail:·,precedes:<,extends:>
 set foldmethod=indent
 set foldnestmax=2
 set nofoldenable
+set completeopt=menuone
 set wildmenu
 set lazyredraw
 set scrolloff=1
@@ -66,7 +67,6 @@ let clang_use_library     = 1
 let clang_complete_auto   = 0
 let clang_complete_macros = 1
 let clang_complete_copen  = 1
-autocmd FileType c,cpp setlocal completeopt=menuone
 autocmd FileType c,cpp highlight clear SpellBad   | highlight SpellBad ctermfg=white ctermbg=red
 autocmd FileType c,cpp highlight clear SpellLocal | highlight SpellLocal ctermfg=white ctermbg=blue
 autocmd FileType c,cpp map <buffer> <silent> <Leader>e :call g:ClangUpdateQuickFix()<Enter>
