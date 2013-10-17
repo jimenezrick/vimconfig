@@ -106,6 +106,7 @@ let tagbar_type_go = {
 
 match Todo /TODO\|FIXME\|XXX\|FUCKME/
 
+inoremap jk <Esc>
 map <C-j> 6j
 map <C-k> 6k
 
