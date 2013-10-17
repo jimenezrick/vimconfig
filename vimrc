@@ -69,7 +69,7 @@ let clang_complete_macros = 1
 let clang_complete_copen  = 1
 autocmd FileType c,cpp highlight clear SpellBad   | highlight SpellBad ctermfg=white ctermbg=red
 autocmd FileType c,cpp highlight clear SpellLocal | highlight SpellLocal ctermfg=white ctermbg=blue
-autocmd FileType c,cpp map <buffer> <silent> <Leader>e :call g:ClangUpdateQuickFix()<Enter>
+autocmd FileType c,cpp noremap <buffer> <silent> <Leader>e :call g:ClangUpdateQuickFix()<Enter>
 
 " Vimerl plugin:
 let erlang_folding     = 1
@@ -82,8 +82,8 @@ let syntastic_auto_loc_list = 1
 let syntastic_mode_map      = {'mode': 'passive'}
 
 " GHC-mod plugin:
-autocmd FileType haskell map <buffer> <silent> <Leader>e :GhcModCheck<Enter>
-autocmd FileType haskell map <buffer> <silent> <Leader>t :GhcModType<Enter>
+autocmd FileType haskell noremap <buffer> <silent> <Leader>e :GhcModCheck<Enter>
+autocmd FileType haskell noremap <buffer> <silent> <Leader>t :GhcModType<Enter>
 
 " Neco-GHC plugin:
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
@@ -107,46 +107,46 @@ let tagbar_type_go = {
 match Todo /TODO\|FIXME\|XXX\|FUCKME/
 
 inoremap jk <Esc>
-map <C-j> 6j
-map <C-k> 6k
+noremap <C-j> 6j
+noremap <C-k> 6k
 
-map <silent> <C-Up>    :wincmd k<Enter>
-map <silent> <C-Down>  :wincmd j<Enter>
-map <silent> <C-Left>  :wincmd h<Enter>
-map <silent> <C-Right> :wincmd l<Enter>
+noremap <silent> <C-Up>    :wincmd k<Enter>
+noremap <silent> <C-Down>  :wincmd j<Enter>
+noremap <silent> <C-Left>  :wincmd h<Enter>
+noremap <silent> <C-Right> :wincmd l<Enter>
 
-map <silent> <F1>  :NERDTreeToggle<Enter>
-map <silent> <F2>  :write<Enter>
-map <silent> <F3>  :nohlsearch<Enter>
-map <silent> <F4>  :make<Enter>
-map <silent> <F5>  :shell<Enter>
-map <silent> <F6>  :if <SID>ToggleAutoHighlight()<Bar>set hlsearch<Bar>else<Bar>nohlsearch<Bar>endif<Enter>
-map <silent> <F7>  :TagbarToggle<Enter>
-map <silent> <F8>  :lvimgrep /TODO\\|FIXME\\|XXX\\|FUCKME/j %<Enter>:lopen<Enter>
-map <silent> <F9>  :checktime<Enter>
-map <silent> <F11> :Spaces<Enter>
-map <silent> <F12> :SpellThis<Enter>
+noremap <silent> <F1>  :NERDTreeToggle<Enter>
+noremap <silent> <F2>  :write<Enter>
+noremap <silent> <F3>  :nohlsearch<Enter>
+noremap <silent> <F4>  :make<Enter>
+noremap <silent> <F5>  :shell<Enter>
+noremap <silent> <F6>  :if <SID>ToggleAutoHighlight()<Bar>set hlsearch<Bar>else<Bar>nohlsearch<Bar>endif<Enter>
+noremap <silent> <F7>  :TagbarToggle<Enter>
+noremap <silent> <F8>  :lvimgrep /TODO\\|FIXME\\|XXX\\|FUCKME/j %<Enter>:lopen<Enter>
+noremap <silent> <F9>  :checktime<Enter>
+noremap <silent> <F11> :Spaces<Enter>
+noremap <silent> <F12> :SpellThis<Enter>
 
 " Corrects current word spelling with the first suggestion
-map <silent> <Leader>s 1z=
+noremap <silent> <Leader>s 1z=
 " Formats current paragraph
-map <silent> <Leader>p gwap
+noremap <silent> <Leader>p gwap
 
 " Uses Tabular plugin to align variable assignments
-map <silent> <Leader>t=       :Tabularize /^[^=]*\zs=<Enter>
+noremap <silent> <Leader>t=       :Tabularize /^[^=]*\zs=<Enter>
 " Uses Tabular plugin to align variable declarations
-map <silent> <Leader>t<Space> :Tabularize /^\s*\S*\zs\(\s\*\\|\s&\\|\s\)/l0r0<Enter>
+noremap <silent> <Leader>t<Space> :Tabularize /^\s*\S*\zs\(\s\*\\|\s&\\|\s\)/l0r0<Enter>
 
 " Adds spaces around current block of lines
-map <silent> <Leader><Space> :call <SID>AddSpaces()<Enter>
+noremap <silent> <Leader><Space> :call <SID>AddSpaces()<Enter>
 " Removes spaces around current block of lines
-map <silent> <Leader><BS>    :call <SID>RemoveSpaces()<Enter>
+noremap <silent> <Leader><BS>    :call <SID>RemoveSpaces()<Enter>
 " Collapses current block of blank lines to one
-map <silent> <Leader><Del>   :call <SID>CollapseSpaces()<Enter>
+noremap <silent> <Leader><Del>   :call <SID>CollapseSpaces()<Enter>
 
 let grep_cmd = 'lgrep! -rIs --exclude-dir=.git --exclude-dir=.hg --exclude=tags'
 " Searches current word recursively in the current directory
-map <silent> <Leader>g :silent execute grep_cmd '-Fw . -e' shellescape(expand('<cword>')) <Bar> lopen <Bar> redraw!<Enter>
+noremap <silent> <Leader>g :silent execute grep_cmd '-Fw . -e' shellescape(expand('<cword>')) <Bar> lopen <Bar> redraw!<Enter>
 " :Grep <pattern> <file>...
 command -nargs=+ -complete=tag Grep silent execute grep_cmd '-E' <q-args> | lopen | redraw!
 
