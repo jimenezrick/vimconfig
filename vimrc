@@ -106,26 +106,27 @@ let tagbar_type_go = {
 
 match Todo /TODO\|FIXME\|XXX\|FUCKME/
 
-inoremap jk <Esc>
-noremap <C-j> 6j
-noremap <C-k> 6k
+inoremap jk                <Esc>
+
+noremap <C-j>              6j
+noremap <C-k>              6k
 
 noremap <silent> <C-Up>    :wincmd k<Enter>
 noremap <silent> <C-Down>  :wincmd j<Enter>
 noremap <silent> <C-Left>  :wincmd h<Enter>
 noremap <silent> <C-Right> :wincmd l<Enter>
 
-noremap <silent> <F1>  :NERDTreeToggle<Enter>
-noremap <silent> <F2>  :write<Enter>
-noremap <silent> <F3>  :nohlsearch<Enter>
-noremap <silent> <F4>  :make<Enter>
-noremap <silent> <F5>  :shell<Enter>
-noremap <silent> <F6>  :if <SID>ToggleAutoHighlight()<Bar>set hlsearch<Bar>else<Bar>nohlsearch<Bar>endif<Enter>
-noremap <silent> <F7>  :TagbarToggle<Enter>
-noremap <silent> <F8>  :lvimgrep /TODO\\|FIXME\\|XXX\\|FUCKME/j %<Enter>:lopen<Enter>
-noremap <silent> <F9>  :checktime<Enter>
-noremap <silent> <F11> :Spaces<Enter>
-noremap <silent> <F12> :SpellThis<Enter>
+noremap <silent> <F1>      :NERDTreeToggle<Enter>
+noremap <silent> <F2>      :write<Enter>
+noremap <silent> <F3>      :nohlsearch<Enter>
+noremap <silent> <F4>      :make<Enter>
+noremap <silent> <F5>      :shell<Enter>
+noremap <silent> <F6>      :if <SID>ToggleAutoHighlight()<Bar>set hlsearch<Bar>else<Bar>nohlsearch<Bar>endif<Enter>
+noremap <silent> <F7>      :TagbarToggle<Enter>
+noremap <silent> <F8>      :lvimgrep /TODO\\|FIXME\\|XXX\\|FUCKME/j %<Enter>:lopen<Enter>
+noremap <silent> <F9>      :checktime<Enter>
+noremap <silent> <F11>     :Spaces<Enter>
+noremap <silent> <F12>     :SpellThis<Enter>
 
 " Corrects current word spelling with the first suggestion
 noremap <silent> <Leader>s 1z=
