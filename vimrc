@@ -13,9 +13,7 @@ set guioptions-=r
 set guioptions-=L
 set guioptions-=R
 
-if $TERM == 'xterm-256color'
-	colorscheme peaksea
-elseif $TERM == 'rxvt-unicode-256color'
+if $TERM == 'xterm-256color' || $TERM == 'rxvt-unicode-256color'
 	colorscheme riri
 endif
 
