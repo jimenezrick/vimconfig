@@ -15,6 +15,7 @@ set guioptions-=R
 
 if $TERM == 'xterm-256color' || $TERM == 'rxvt-unicode-256color'
 	colorscheme riri
+	set cursorline
 endif
 
 set nocompatible
@@ -26,7 +27,6 @@ set relativenumber
 set ruler
 set showmatch
 set hlsearch
-set cursorline
 set autoindent
 set incsearch
 set nowrap
