@@ -131,11 +131,6 @@ noremap <silent> <Leader>s 1z=
 " Formats current paragraph
 noremap <silent> <Leader>p gwap
 
-" Uses Tabular plugin to align variable assignments
-noremap <silent> <Leader>t=       :Tabularize /^[^=]*\zs=<Enter>
-" Uses Tabular plugin to align variable declarations
-noremap <silent> <Leader>t<Space> :Tabularize /^\s*\S*\zs\(\s\*\\|\s&\\|\s\)/l0r0<Enter>
-
 " Adds spaces around current block of lines
 noremap <silent> <Leader><Space> :call <SID>AddSpaces()<Enter>
 " Removes spaces around current block of lines
