@@ -131,6 +131,9 @@ noremap <silent> <Leader>s 1z=
 " Formats current paragraph
 noremap <silent> <Leader>p gwap
 
+" Enter in interactive mode of EasyAlign plugin
+vnoremap <silent> <Enter> :EasyAlign<Enter>
+
 " Adds spaces around current block of lines
 noremap <silent> <Leader><Space> :call <SID>AddSpaces()<Enter>
 " Removes spaces around current block of lines
