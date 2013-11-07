@@ -29,6 +29,8 @@ set showmatch
 set hlsearch
 set autoindent
 set incsearch
+set ignorecase
+set smartcase
 set nowrap
 set list
 set listchars=tab:\|\ ,trail:·,precedes:<,extends:>
