@@ -143,13 +143,11 @@ noremap <silent> <Leader><BS>    :call <SID>RemoveSpaces()<Enter>
 " Collapses current block of blank lines to one
 noremap <silent> <Leader><Del>   :call <SID>CollapseSpaces()<Enter>
 
-let grep_cmd = 'lgrep! -rIs --exclude-dir=.git --exclude-dir=.hg --exclude=tags'
+let &grepprg = 'grep -nH -rIs --exclude-dir=.git --exclude-dir=.hg --exclude=tags $*'
 " Searches current word recursively in the current directory
-noremap <silent> <Leader>g :silent execute grep_cmd '-Fw . -e' shellescape(expand('<cword>')) <Bar> lopen <Bar> redraw!<Enter>
-" :Grep <pattern>
-command -nargs=1 -complete=tag Grep silent execute grep_cmd '-E' <q-args> | lopen | redraw!
-" :GrepFiles <pattern> <file>...
-command -nargs=+ -complete=file GrepFiles silent execute grep_cmd '-E' <q-args> | lopen | redraw!
+noremap <silent> <Leader>g :silent execute 'lgrep! -Fw' shellescape(expand('<cword>')) '.' <Bar> lopen <Bar> redraw!<Enter>
+" :Grep <pattern> [<file>...]
+command -nargs=+ -complete=file Grep silent lgrep! -E <args> | lopen | redraw!
 
 " Shows double and trailing spaces
 command Spaces silent normal / \{2}\|\s\+$\|\n\{3}/<Enter>
