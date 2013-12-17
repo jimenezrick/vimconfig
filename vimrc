@@ -144,7 +144,7 @@ noremap <silent> <Leader><BS>    :call <SID>RemoveSpaces()<Enter>
 " Collapses current block of blank lines to one
 noremap <silent> <Leader><Del>   :call <SID>CollapseSpaces()<Enter>
 
-let &grepprg = 'grep -nH -rIs --exclude-dir=.git --exclude-dir=.hg --exclude=tags $*'
+let &grepprg = 'grep -nH -C5 -rIs --exclude-dir=.git --exclude-dir=.hg --exclude=tags $*'
 " Searches current word recursively in the current directory
 noremap <silent> <Leader>g :silent execute 'lgrep! -Fw' shellescape(expand('<cword>')) '.' <Bar> lopen <Bar> redraw!<Enter>
 " :Grep <pattern> [<file>...]
