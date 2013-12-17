@@ -90,7 +90,8 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 let $PATH = $PATH . ':' . expand('~/.cabal/bin')
 
 " CtrlP plugin:
-let ctrlp_max_files = 0
+let ctrlp_max_files  = 0
+let ctrlp_extensions = ['tag', 'buffertag']
 
 " Tagbar plugin:
 let tagbar_type_go = {
