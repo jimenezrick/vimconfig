@@ -54,7 +54,6 @@ autocmd BufEnter *.md                   setlocal filetype=markdown
 
 autocmd FileType c,cpp                  setlocal foldmethod=syntax cinoptions=(0,g0,N-s,:0,l1,t0
 autocmd FileType go                     setlocal foldmethod=syntax formatoptions+=ro suffixesadd=.go
-autocmd FileType go                     autocmd BufWritePre <buffer> Fmt
 autocmd FileType erlang,haskell         setlocal expandtab tabstop=4 shiftwidth=4
 autocmd FileType haskell,python         setlocal foldmethod=indent
 autocmd FileType text,markdown,tex,mail setlocal textwidth=72 formatoptions+=2l colorcolumn=+1 spell
@@ -72,6 +71,12 @@ let clang_complete_copen  = 1
 autocmd FileType c,cpp highlight clear SpellBad   | highlight SpellBad ctermfg=white ctermbg=red
 autocmd FileType c,cpp highlight clear SpellLocal | highlight SpellLocal ctermfg=white ctermbg=blue
 autocmd FileType c,cpp noremap <buffer> <silent> <Leader>e :call g:ClangUpdateQuickFix()<Enter>
+
+" Go plugin:
+if executable('goimports')
+	let gofmt_command = 'goimports'
+endif
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
 " Vimerl plugin:
 let erlang_folding     = 1
