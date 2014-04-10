@@ -46,7 +46,6 @@ set nospell
 set spelllang=es,en
 set path+=/usr/local/include,**
 set pastetoggle=<F10>
-set splitright
 
 autocmd BufEnter README,TODO,BUGS       setlocal filetype=text
 autocmd BufEnter PLAN,NOTES,*.notes     setlocal filetype=notes
