@@ -45,7 +45,7 @@
 	url = git://github.com/fs111/pydoc.vim.git
 [submodule "bundle/vim-easy-align"]
 	path = bundle/vim-easy-align
-	url = git@github.com:junegunn/vim-easy-align.git
+	url = git://github.com/junegunn/vim-easy-align.git
 [submodule "bundle/vim-scala"]
 	path = bundle/vim-scala
-	url = git@github.com:derekwyatt/vim-scala.git
+	url = git://github.com/derekwyatt/vim-scala.git
