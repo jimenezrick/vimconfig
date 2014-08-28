@@ -52,3 +52,4 @@
 [submodule "bundle/sbt-quickfix"]
 	path = bundle/sbt-quickfix
 	url = git://github.com/dscleaver/sbt-quickfix.git
+	ignore = untracked
