@@ -226,7 +226,7 @@ function s:ToggleAutoHighlight()
 			autocmd!
 			autocmd CursorHold * let @/ = '\V\<' . escape(expand('<cword>'), '\') . '\>'
 		augroup END
-		set updatetime=500
+		set updatetime=200
 		return 1
 	endif
 endfunction
