@@ -51,7 +51,7 @@ autocmd BufEnter README,TODO,BUGS                 setlocal filetype=text
 autocmd BufEnter PLAN,NOTES,*.notes               setlocal filetype=notes
 autocmd BufEnter *.md                             setlocal filetype=markdown
 
-autocmd FileType c,cpp                            setlocal foldmethod=syntax cinoptions=(0,g0,N-s,:0,l1,t0
+autocmd FileType c,cpp                            setlocal foldmethod=syntax cinoptions=(0,g0,N-s,:0,l1,t0 | compiler gcc
 autocmd FileType go                               setlocal foldmethod=syntax formatoptions+=ro suffixesadd=.go
 autocmd FileType scala                            setlocal expandtab tabstop=2 shiftwidth=2 path-=**
 autocmd FileType erlang,haskell                   setlocal expandtab tabstop=4 shiftwidth=4
