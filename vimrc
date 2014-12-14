@@ -88,6 +88,12 @@ let erlang_skel_header = {'author': 'Ricardo Catalinas Jiménez <jimenezrick@gma
 let syntastic_auto_loc_list = 1
 let syntastic_mode_map      = {'mode': 'passive'}
 
+" Haskell plugin:
+let hs_highlight_delimiters = 1
+let hs_highlight_boolean    = 1
+let hs_highlight_types      = 1
+let hs_highlight_more_types = 1
+
 " GHC-mod plugin:
 autocmd FileType haskell noremap <buffer> <silent> <Leader>e :GhcModCheck<Enter>
 autocmd FileType haskell noremap <buffer> <silent> <Leader>t :GhcModType<Enter>
