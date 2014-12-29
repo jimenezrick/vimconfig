@@ -56,6 +56,7 @@ autocmd FileType go                               setlocal foldmethod=syntax for
 autocmd FileType scala                            setlocal expandtab tabstop=2 shiftwidth=2 path-=**
 autocmd FileType haskell,erlang                   setlocal expandtab tabstop=4 shiftwidth=4
 autocmd FileType haskell,python                   setlocal foldmethod=indent
+autocmd FileType haskell                          setlocal comments=s1fl:{-,mb:\ ,ex:-},:--
 autocmd FileType cabal                            setlocal expandtab tabstop=2 shiftwidth=2
 autocmd FileType text,notes,markdown,rst,tex,mail setlocal textwidth=72 formatoptions+=2l colorcolumn=+1 spell
 autocmd FileType gitcommit                        setlocal spell
