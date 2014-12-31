@@ -56,3 +56,6 @@
 [submodule "bundle/haskell-vim"]
 	path = bundle/haskell-vim
 	url = git@github.com:raichoo/haskell-vim.git
+[submodule "bundle/cql-vim"]
+	path = bundle/cql-vim
+	url = git@github.com:elubow/cql-vim.git
