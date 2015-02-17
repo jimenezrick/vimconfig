@@ -150,6 +150,9 @@ noremap <silent> <Leader>s 1z=
 " Formats current paragraph
 noremap <silent> <Leader>p gwap
 
+" Open CtrlP in find buffer mode
+noremap <silent> <Space> :CtrlPBuffer<Enter>
+
 " Enter in interactive mode of EasyAlign plugin
 vnoremap <silent> <Enter> :EasyAlign<Enter>
 
