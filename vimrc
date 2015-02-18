@@ -152,12 +152,14 @@ noremap <silent> <Leader>p gwap
 
 " Open CtrlP in find buffer mode
 noremap <silent> <Space> :CtrlPBuffer<Enter>
+" Open location list window
+noremap <silent> <Leader><Space> :lopen<Enter>
 
 " Enter in interactive mode of EasyAlign plugin
 vnoremap <silent> <Enter> :EasyAlign<Enter>
 
 " Adds spaces around current block of lines
-noremap <silent> <Leader><Space> :call <SID>AddSpaces()<Enter>
+noremap <silent> <Leader><Enter> :call <SID>AddSpaces()<Enter>
 " Removes spaces around current block of lines
 noremap <silent> <Leader><BS>    :call <SID>RemoveSpaces()<Enter>
 " Collapses current block of blank lines to one
