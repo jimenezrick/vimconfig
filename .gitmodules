@@ -43,13 +43,6 @@
 [submodule "bundle/vim-easy-align"]
 	path = bundle/vim-easy-align
 	url = git://github.com/junegunn/vim-easy-align.git
-[submodule "bundle/vim-scala"]
-	path = bundle/vim-scala
-	url = git://github.com/derekwyatt/vim-scala.git
-[submodule "bundle/sbt-quickfix"]
-	path = bundle/sbt-quickfix
-	url = git://github.com/dscleaver/sbt-quickfix.git
-	ignore = untracked
 [submodule "bundle/gocode"]
 	path = bundle/gocode
 	url = git@github.com:nsf/gocode.git
