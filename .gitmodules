@@ -45,10 +45,10 @@
 	url = git://github.com/junegunn/vim-easy-align.git
 [submodule "bundle/gocode"]
 	path = bundle/gocode
-	url = git@github.com:nsf/gocode.git
+	url = git://github.com/nsf/gocode.git
 [submodule "bundle/haskell-vim"]
 	path = bundle/haskell-vim
-	url = git@github.com:raichoo/haskell-vim.git
+	url = git://github.com/raichoo/haskell-vim.git
 [submodule "bundle/cql-vim"]
 	path = bundle/cql-vim
-	url = git@github.com:elubow/cql-vim.git
+	url = git://github.com/elubow/cql-vim.git
