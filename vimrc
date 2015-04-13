@@ -66,6 +66,7 @@ autocmd FileType help                             setlocal nospell
 let c_no_curly_error = 1 " For C++11 lambdas
 
 " Clang Complete plugin:
+let clang_make_default_keymappings = 0
 let clang_use_library     = 1
 let clang_complete_auto   = 0
 let clang_complete_macros = 1
