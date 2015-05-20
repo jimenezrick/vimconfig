@@ -111,18 +111,35 @@ let ctrlp_extensions = ['tag', 'buffertag']
 
 " Tagbar plugin:
 let tagbar_type_go = {
-	\ 'ctagstype': 'Go',
-	\ 'kinds'    : [
-		\ 'p:packages',
-		\ 'f:functions',
+	\ 'ctagstype' : 'go',
+	\ 'kinds'     : [
+		\ 'p:package',
+		\ 'i:imports:1',
+		\ 'c:constants',
 		\ 'v:variables',
 		\ 't:types',
-		\ 'c:constants'
-	\ ]
+		\ 'n:interfaces',
+		\ 'w:fields',
+		\ 'e:embedded',
+		\ 'm:methods',
+		\ 'r:constructor',
+		\ 'f:functions'
+	\ ],
+	\ 'sro' : '.',
+	\ 'kind2scope' : {
+		\ 't' : 'ctype',
+		\ 'n' : 'ntype'
+	\ },
+	\ 'scope2kind' : {
+		\ 'ctype' : 't',
+		\ 'ntype' : 'n'
+	\ },
+	\ 'ctagsbin'  : 'gotags',
+	\ 'ctagsargs' : '-sort -silent'
 \ }
 
 let tagbar_type_haskell = {
-	\ 'ctagstype' : 'Haskell',
+	\ 'ctagstype' : 'haskell',
 	\ 'ctagsbin'  : 'hasktags',
 	\ 'ctagsargs' : '-x -c -o-',
 	\ 'kinds'     : [
