@@ -75,12 +75,6 @@ autocmd FileType c,cpp highlight clear SpellBad   | highlight SpellBad ctermfg=w
 autocmd FileType c,cpp highlight clear SpellLocal | highlight SpellLocal ctermfg=white ctermbg=blue
 autocmd FileType c,cpp noremap <buffer> <silent> <Leader>e :call g:ClangUpdateQuickFix()<Enter>
 
-" Go plugin:
-if executable('goimports')
-	let gofmt_command = 'goimports'
-endif
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
-
 " Vimerl plugin:
 let erlang_folding     = 1
 let erlang_show_errors = 0
@@ -110,34 +104,6 @@ let ctrlp_max_files  = 0
 let ctrlp_extensions = ['tag', 'buffertag']
 
 " Tagbar plugin:
-let tagbar_type_go = {
-	\ 'ctagstype' : 'go',
-	\ 'kinds'     : [
-		\ 'p:package',
-		\ 'i:imports:1',
-		\ 'c:constants',
-		\ 'v:variables',
-		\ 't:types',
-		\ 'n:interfaces',
-		\ 'w:fields',
-		\ 'e:embedded',
-		\ 'm:methods',
-		\ 'r:constructor',
-		\ 'f:functions'
-	\ ],
-	\ 'sro' : '.',
-	\ 'kind2scope' : {
-		\ 't' : 'ctype',
-		\ 'n' : 'ntype'
-	\ },
-	\ 'scope2kind' : {
-		\ 'ctype' : 't',
-		\ 'ntype' : 'n'
-	\ },
-	\ 'ctagsbin'  : 'gotags',
-	\ 'ctagsargs' : '-sort -silent'
-\ }
-
 let tagbar_type_haskell = {
 	\ 'ctagstype' : 'haskell',
 	\ 'ctagsbin'  : 'hasktags',
