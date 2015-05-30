@@ -37,9 +37,6 @@
 [submodule "bundle/vim-easy-align"]
 	path = bundle/vim-easy-align
 	url = git://github.com/junegunn/vim-easy-align.git
-[submodule "bundle/gocode"]
-	path = bundle/gocode
-	url = git://github.com/nsf/gocode.git
 [submodule "bundle/haskell-vim"]
 	path = bundle/haskell-vim
 	url = git://github.com/raichoo/haskell-vim.git
