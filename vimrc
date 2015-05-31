@@ -62,6 +62,11 @@ autocmd FileType text,notes,markdown,rst,tex,mail setlocal textwidth=72 formatop
 autocmd FileType gitcommit                        setlocal spell
 autocmd FileType help                             setlocal nospell
 
+" Vim-go plugin:
+let go_auto_type_info    = 1
+let go_fmt_fail_silently = 1
+let go_fmt_command       = "goimports"
+
 " C plugin:
 let c_no_curly_error = 1 " For C++11 lambdas
 
