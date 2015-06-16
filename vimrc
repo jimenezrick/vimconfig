@@ -145,6 +145,7 @@ let tagbar_type_haskell = {
 match Todo /TODO\|FIXME\|XXX\|FUCKME/
 
 inoremap jk                <Esc>
+inoremap kj                <Esc>:w<Enter>
 
 noremap <C-j>              6j
 noremap <C-k>              6k
