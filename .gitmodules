@@ -55,3 +55,6 @@
 [submodule "bundle/vim-go"]
 	path = bundle/vim-go
 	url = git://github.com/fatih/vim-go.git
+[submodule "bundle/papercolor"]
+	path = bundle/papercolor
+	url = git://github.com/NLKNguyen/papercolor-theme.git
