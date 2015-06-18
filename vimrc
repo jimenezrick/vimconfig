@@ -14,7 +14,7 @@ set guioptions-=L
 set guioptions-=R
 
 if $TERM == 'xterm-256color' || $TERM == 'rxvt-unicode-256color'
-	colorscheme riri
+	colorscheme PaperColor
 	set cursorline
 endif
 
