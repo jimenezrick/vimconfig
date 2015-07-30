@@ -24,7 +24,7 @@
 	url = git://github.com/tpope/vim-fugitive.git
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
-	url = git://github.com/kien/ctrlp.vim.git
+	url = git://github.com/ctrlpvim/ctrlp.vim.git
 [submodule "bundle/ghcmod"]
 	path = bundle/ghcmod
 	url = git://github.com/eagletmt/ghcmod-vim.git
@@ -48,7 +48,7 @@
 	url = git://github.com/vim-pandoc/vim-pandoc-syntax.git
 [submodule "bundle/rainbow_parentheses"]
 	path = bundle/rainbow_parentheses
-	url = git://github.com/kien/rainbow_parentheses.vim.git
+	url = git://github.com/junegunn/rainbow_parentheses.vim.git
 [submodule "bundle/jedi-vim"]
 	path = bundle/jedi-vim
 	url = git://github.com/davidhalter/jedi-vim.git
