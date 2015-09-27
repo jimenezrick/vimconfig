@@ -55,7 +55,7 @@ autocmd BufEnter *.cql                            setlocal filetype=cql
 
 autocmd FileType c,cpp                            setlocal foldmethod=syntax cinoptions=(0,g0,N-s,:0,l1,t0 | compiler gcc
 autocmd FileType go                               setlocal foldmethod=syntax formatoptions+=ro suffixesadd=.go
-autocmd FileType haskell,erlang                   setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=2 shiftround
+autocmd FileType haskell,erlang                   setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=2
 autocmd FileType haskell,python                   setlocal foldmethod=indent
 autocmd FileType cabal,yaml                       setlocal expandtab tabstop=2 shiftwidth=2
 autocmd FileType text,notes,markdown,rst,tex,mail setlocal textwidth=72 formatoptions+=2l colorcolumn=+1 spell
