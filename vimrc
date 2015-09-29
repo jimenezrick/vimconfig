@@ -62,6 +62,8 @@ autocmd FileType text,notes,markdown,rst,tex,mail setlocal textwidth=72 formatop
 autocmd FileType gitcommit                        setlocal spell
 autocmd FileType help                             setlocal nospell
 
+autocmd FileType haskell noremap <buffer> <silent> K :execute '!hoogle search --color --info' shellescape(expand('<cWORD>')) '\| less -R'<Enter>
+
 " Vim-go plugin:
 let go_auto_type_info    = 1
 let go_fmt_fail_silently = 1
