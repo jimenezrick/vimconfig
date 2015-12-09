@@ -61,3 +61,6 @@
 [submodule "bundle/vim-python-pep8-indent"]
 	path = bundle/vim-python-pep8-indent
 	url = git://github.com/hynek/vim-python-pep8-indent.git
+[submodule "bundle/grepper"]
+	path = bundle/grepper
+	url = git://github.com/mhinz/vim-grepper.git
