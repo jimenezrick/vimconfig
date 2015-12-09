@@ -191,6 +191,9 @@ noremap <silent> <Leader><BS>    :call <SID>RemoveSpaces()<Enter>
 " Collapses current block of blank lines to one
 noremap <silent> <Leader><Del>   :call <SID>CollapseSpaces()<Enter>
 
+nnoremap <Leader>g :Grepper -open -switch<Enter>
+nnoremap <Leader>* :Grepper -open -switch -cword<Enter>
+
 " Shows double and trailing spaces
 command Spaces silent normal / \{2}\|\s\+$\|\n\{3}/<Enter>
 
