@@ -64,3 +64,6 @@
 [submodule "bundle/grepper"]
 	path = bundle/grepper
 	url = git://github.com/mhinz/vim-grepper.git
+[submodule "bundle/gutentags"]
+	path = bundle/gutentags
+	url = git://github.com/ludovicchabant/vim-gutentags.git
