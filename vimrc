@@ -64,10 +64,18 @@ autocmd FileType help                             setlocal nospell
 
 autocmd FileType haskell noremap <buffer> <silent> K :execute '!hoogle search --color --info' shellescape(expand('<cword>')) '\| less -R'<Enter>
 
+" Gutentags plugin:
+let g:gutentags_ctags_executable_haskell = 'vim-hasktags'
+let g:gutentags_ctags_executable_go      = 'vim-gotags'
+let g:gutentags_project_info             = [
+	\ {'type': 'haskell', 'glob': '*.cabal'},
+	\ {'type': 'go', 'glob': '*.go'},
+\ ]
+
 " Vim-go plugin:
 let go_auto_type_info    = 1
 let go_fmt_fail_silently = 1
-let go_fmt_command       = "goimports"
+let go_fmt_command       = 'goimports'
 
 " C plugin:
 let c_no_curly_error = 1 " For C++11 lambdas
