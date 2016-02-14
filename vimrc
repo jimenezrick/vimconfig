@@ -70,6 +70,7 @@ let g:gutentags_ctags_executable_go      = 'vim-gotags'
 let g:gutentags_project_info             = [
 	\ {'type': 'haskell', 'glob': '*.cabal'},
 	\ {'type': 'go', 'glob': '*.go'},
+	\ {'type': 'go', 'glob': '*/*.go'},
 \ ]
 
 " Vim-go plugin:
