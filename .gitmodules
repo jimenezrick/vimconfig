@@ -64,3 +64,6 @@
 [submodule "bundle/gutentags"]
 	path = bundle/gutentags
 	url = git://github.com/ludovicchabant/vim-gutentags.git
+[submodule "bundle/vim-clang"]
+	path = bundle/vim-clang
+	url = git://github.com/justmao945/vim-clang.git
