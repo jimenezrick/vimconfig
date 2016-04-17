@@ -78,19 +78,6 @@ let go_auto_type_info    = 1
 let go_fmt_fail_silently = 1
 let go_fmt_command       = 'goimports'
 
-" C plugin:
-let c_no_curly_error = 1 " For C++11 lambdas
-
-" Clang Complete plugin:
-let clang_make_default_keymappings = 0
-let clang_use_library     = 1
-let clang_complete_auto   = 0
-let clang_complete_macros = 1
-let clang_complete_copen  = 1
-autocmd FileType c,cpp highlight clear SpellBad   | highlight SpellBad ctermfg=white ctermbg=red
-autocmd FileType c,cpp highlight clear SpellLocal | highlight SpellLocal ctermfg=white ctermbg=blue
-autocmd FileType c,cpp noremap <buffer> <silent> <Leader>e :call g:ClangUpdateQuickFix()<Enter>
-
 " Vimerl plugin:
 let erlang_folding     = 1
 let erlang_show_errors = 0
