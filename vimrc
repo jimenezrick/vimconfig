@@ -174,9 +174,9 @@ noremap <silent> <F12>     :SpellThis<Enter>
 noremap <silent> <Leader>s :SyntasticToggleMode<Enter>
 
 " Corrects current word spelling with the first suggestion
-autocmd FileType text,notes,markdown,rst,tex,mail noremap <buffer> <silent> <Leader>s 1z=
+autocmd FileType text,notes,markdown,rst,tex,mail,gitcommit noremap <buffer> <silent> <Leader>s 1z=
 " Formats current paragraph
-autocmd FileType text,notes,markdown,rst,tex,mail noremap <buffer> <silent> <Leader>p gwap
+autocmd FileType text,notes,markdown,rst,tex,mail,gitcommit noremap <buffer> <silent> <Leader>p gwap
 
 " Open CtrlP in find buffer mode
 noremap <silent> <Space> :CtrlPBuffer<Enter>
