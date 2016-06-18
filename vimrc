@@ -68,7 +68,11 @@ autocmd FileType haskell noremap <buffer> <silent> K :execute '!hoogle search --
 let clang_cpp_options = '-std=c++14 -stdlib=libc++'
 
 " Syntastic plugin:
+let syntastic_auto_loc_list = 1
+let syntastic_mode_map      = {'mode': 'passive'}
+
 let syntastic_cpp_compiler_options = '-std=c++14'
+let syntastic_go_checkers          = ['go']
 
 " Gutentags plugin:
 let gutentags_ctags_executable_haskell = 'vim-hasktags'
@@ -89,10 +93,6 @@ let erlang_folding     = 1
 let erlang_show_errors = 0
 let erlang_skel_header = {'author': 'Ricardo Catalinas Jiménez <jimenezrick@gmail.com>',
 		       \  'owner' : 'Ricardo Catalinas Jiménez'}
-
-" Syntastic plugin:
-let syntastic_auto_loc_list = 1
-let syntastic_mode_map      = {'mode': 'passive'}
 
 " haskell-vim plugin:
 let haskell_enable_quantification = 1
