@@ -105,6 +105,7 @@ autocmd FileType haskell noremap <buffer> <silent> <Leader>e :GhcModCheck<Enter>
 autocmd FileType haskell noremap <buffer> <silent> <Leader>t :GhcModType<Enter>
 
 " Neco-GHC plugin:
+let necoghc_enable_detailed_browse = 1
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 let $PATH = $PATH . ':' . expand('~/.cabal/bin')
 
