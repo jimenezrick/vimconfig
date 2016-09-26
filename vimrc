@@ -101,7 +101,7 @@ let haskell_indent_case           = 4
 let haskell_indent_in             = 0
 
 " GHC-mod plugin:
-autocmd FileType haskell noremap <buffer> <silent> <Leader>e :GhcModCheck<Enter>
+autocmd FileType haskell noremap <buffer> <silent> <Leader>e :GhcModCheckAsync<Enter>
 autocmd FileType haskell noremap <buffer> <silent> <Leader>t :GhcModType<Enter>
 
 " Neco-GHC plugin:
