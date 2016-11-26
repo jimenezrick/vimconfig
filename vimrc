@@ -50,13 +50,11 @@ set pastetoggle=<F10>
 
 autocmd BufEnter README,TODO,BUGS                 setlocal filetype=text
 autocmd BufEnter PLAN,NOTES,*.notes               setlocal filetype=notes
-autocmd BufEnter *.md                             setlocal filetype=markdown
-autocmd BufEnter *.cql                            setlocal filetype=cql
+autocmd BufEnter *.sls                            setlocal filetype=yaml
 
 autocmd FileType c,cpp                            setlocal foldmethod=syntax cinoptions=(0,g0,N-s,:0,l1,t0 | compiler gcc
 autocmd FileType go                               setlocal foldmethod=syntax formatoptions+=ro suffixesadd=.go
-autocmd FileType haskell,erlang                   setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=2
-autocmd FileType haskell,python                   setlocal foldmethod=indent
+autocmd FileType haskell                          setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=2 foldmethod=indent
 autocmd FileType cabal,yaml                       setlocal expandtab tabstop=2 shiftwidth=2
 autocmd FileType text,notes,markdown,rst,tex,mail setlocal textwidth=72 formatoptions+=2l colorcolumn=+1 spell
 autocmd FileType gitcommit                        setlocal spell
@@ -87,12 +85,6 @@ let gutentags_project_info             = [
 let go_auto_type_info    = 1
 let go_fmt_fail_silently = 1
 let go_fmt_command       = 'goimports'
-
-" Vimerl plugin:
-let erlang_folding     = 1
-let erlang_show_errors = 0
-let erlang_skel_header = {'author': 'Ricardo Catalinas Jiménez <jimenezrick@gmail.com>',
-		       \  'owner' : 'Ricardo Catalinas Jiménez'}
 
 " haskell-vim plugin:
 let haskell_enable_quantification = 1
