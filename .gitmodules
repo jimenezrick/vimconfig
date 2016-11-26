@@ -37,9 +37,6 @@
 [submodule "bundle/haskell-vim"]
 	path = bundle/haskell-vim
 	url = git://github.com/neovimhaskell/haskell-vim.git
-[submodule "bundle/cql-vim"]
-	path = bundle/cql-vim
-	url = git://github.com/elubow/cql-vim.git
 [submodule "bundle/vim-pandoc-syntax"]
 	path = bundle/vim-pandoc-syntax
 	url = git://github.com/vim-pandoc/vim-pandoc-syntax.git
