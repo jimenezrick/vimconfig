@@ -44,7 +44,7 @@ set lazyredraw
 set scrolloff=1
 set sidescrolloff=6
 set nospell
-set spelllang=es,en
+set spelllang=en,es
 set path+=/usr/local/include,**
 set pastetoggle=<F10>
 
