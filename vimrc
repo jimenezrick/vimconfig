@@ -56,8 +56,9 @@ autocmd FileType c,cpp                            setlocal foldmethod=syntax cin
 autocmd FileType go                               setlocal foldmethod=syntax formatoptions+=ro suffixesadd=.go
 autocmd FileType haskell                          setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=2 foldmethod=indent
 autocmd FileType cabal,yaml                       setlocal expandtab tabstop=2 shiftwidth=2
-autocmd FileType text,notes,markdown,rst,tex,mail setlocal textwidth=72 formatoptions+=2l colorcolumn=+1 spell
-autocmd FileType gitcommit                        setlocal spell
+autocmd FileType text,notes,markdown,rst,tex,mail setlocal textwidth=72 formatoptions+=2l colorcolumn=+1
+autocmd FileType text,notes,markdown,rst,tex,mail setlocal expandtab tabstop=2 shiftwidth=2 spell
+autocmd FileType gitcommit                        setlocal expandtab tabstop=2 shiftwidth=2 spell
 autocmd FileType help                             setlocal nospell
 
 autocmd FileType haskell noremap <buffer> <silent> K :execute '!hoogle search --color --info' shellescape(expand('<cword>')) '\| less -R'<Enter>
