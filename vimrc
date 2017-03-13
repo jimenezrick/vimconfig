@@ -66,13 +66,6 @@ autocmd FileType haskell noremap <buffer> <silent> K :execute '!hoogle search --
 " Clang plugin:
 let clang_cpp_options = '-std=c++14 -stdlib=libc++'
 
-" Syntastic plugin:
-let syntastic_auto_loc_list = 1
-let syntastic_mode_map      = {'mode': 'passive'}
-
-let syntastic_cpp_compiler_options = '-std=c++14'
-let syntastic_go_checkers          = ['go']
-
 " Neomake plugin:
 let neomake_error_sign   = {'text': 'E>', 'texthl': 'NeomakeErrorSign'}
 let neomake_warning_sign = {'text': 'W>', 'texthl': 'NeomakeWarningSign'}
@@ -175,8 +168,6 @@ noremap <silent> <F8>      :lvimgrep /TODO\\|FIXME\\|XXX\\|FUCKME/j %<Enter>:lop
 noremap <silent> <F9>      :checktime<Enter>
 noremap <silent> <F11>     :Spaces<Enter>
 noremap <silent> <F12>     :SpellThis<Enter>
-
-noremap <silent> <Leader>s :SyntasticToggleMode<Enter>
 
 " Corrects current word spelling with the first suggestion
 autocmd FileType text,notes,markdown,rst,tex,mail,gitcommit noremap <buffer> <silent> <Leader>s 1z=
