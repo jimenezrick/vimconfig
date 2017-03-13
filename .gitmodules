@@ -64,3 +64,6 @@
 [submodule "bundle/signature"]
 	path = bundle/signature
 	url = git://github.com/kshenoy/vim-signature.git
+[submodule "bundle/neomake"]
+	path = bundle/neomake
+	url = git://github.com/neomake/neomake.git
