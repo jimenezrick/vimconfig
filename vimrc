@@ -73,6 +73,13 @@ let syntastic_mode_map      = {'mode': 'passive'}
 let syntastic_cpp_compiler_options = '-std=c++14'
 let syntastic_go_checkers          = ['go']
 
+" Neomake plugin:
+let neomake_error_sign   = {'text': 'E>', 'texthl': 'NeomakeErrorSign'}
+let neomake_warning_sign = {'text': 'W>', 'texthl': 'NeomakeWarningSign'}
+let neomake_message_sign = {'text': 'M>', 'texthl': 'NeomakeMessageSign'}
+let neomake_info_sign    = {'text': 'I>', 'texthl': 'NeomakeInfoSign'}
+autocmd! BufWritePost * Neomake
+
 " Grepper plugin:
 let grepper       = {}
 let grepper.tools = ['git', 'grep']
