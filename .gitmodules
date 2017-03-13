@@ -61,3 +61,6 @@
 [submodule "bundle/vim-clang"]
 	path = bundle/vim-clang
 	url = git://github.com/justmao945/vim-clang.git
+[submodule "bundle/signature"]
+	path = bundle/signature
+	url = git://github.com/kshenoy/vim-signature.git
