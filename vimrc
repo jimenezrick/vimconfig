@@ -65,6 +65,7 @@ autocmd FileType haskell noremap <buffer> <silent> K :execute '!hoogle search --
 
 " Startify plugin:
 let startify_custom_header = readfile(split(&runtimepath, ",")[0] . '/logo.txt')
+let startify_change_to_dir = 0
 
 " Clang plugin:
 let clang_cpp_options = '-std=c++14 -stdlib=libc++'
