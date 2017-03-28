@@ -63,6 +63,9 @@ autocmd FileType help                             setlocal nospell
 
 autocmd FileType haskell noremap <buffer> <silent> K :execute '!hoogle search --color --info' shellescape(expand('<cword>')) '\| less -R'<Enter>
 
+" Startify plugin:
+let startify_custom_header = readfile(split(&runtimepath, ",")[0] . '/logo.txt')
+
 " Clang plugin:
 let clang_cpp_options = '-std=c++14 -stdlib=libc++'
 
