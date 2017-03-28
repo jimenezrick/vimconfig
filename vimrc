@@ -75,6 +75,8 @@ let neomake_warning_sign = {'text': 'W>', 'texthl': 'NeomakeWarningSign'}
 let neomake_message_sign = {'text': 'M>', 'texthl': 'NeomakeMessageSign'}
 let neomake_info_sign    = {'text': 'I>', 'texthl': 'NeomakeInfoSign'}
 
+highlight NeomakeErrorSign ctermfg=red
+highlight NeomakeError     ctermfg=red cterm=underline
 autocmd! BufWritePost * Neomake
 
 " Grepper plugin:
