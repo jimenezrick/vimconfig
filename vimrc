@@ -121,7 +121,7 @@ let ctrlp_extensions = ['tag', 'buffertag']
 let tagbar_type_haskell = {
 	\ 'ctagstype' : 'haskell',
 	\ 'ctagsbin'  : 'hasktags',
-	\ 'ctagsargs' : '-x -c -o-',
+	\ 'ctagsargs' : '-x -c --ignore-close-implementation -o-',
 	\ 'kinds'     : [
 		\ 'm:modules:0:1',
 		\ 'd:data: 0:1',
