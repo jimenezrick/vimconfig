@@ -103,6 +103,7 @@ let haskell_enable_quantification = 1
 let haskell_indent_if             = 4
 let haskell_indent_case           = 4
 let haskell_indent_in             = 0
+let haskell_indent_before_where   = 2
 
 " GHC-mod plugin:
 autocmd FileType haskell noremap <buffer> <silent> <Leader>e :GhcModCheckAsync<Enter>
