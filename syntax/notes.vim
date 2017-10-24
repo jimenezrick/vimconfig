@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language: Notes
 " Author:   Ricardo Catalinas Jiménez <jimenezrick@gmail.com>
-" Version:  Tue Jan 22 10:55:18 CET 2013
+" Version:  Tue Oct 24 11:21:58 BST 2017
 
 if exists('b:current_syntax')
 	finish
@@ -12,32 +12,35 @@ set conceallevel=2
 
 highlight! link Conceal Comment
 
-syntax match heading /^\S.*/
-highlight link heading Special
+syntax match heading /^\S.*/ contains=headingSection
+highlight heading cterm=bold
+syntax match headingSection contained /#/ conceal cchar=§
 
-syntax match item /^\s*\zs-\ze\s/
-highlight link item Comment
+syntax match item /^\s*\zs-\ze\s/ conceal cchar=─
 
-syntax match item2 /^\s*\zs+\ze\s/ conceal cchar=•
-highlight link item2 Comment
+syntax match item2 /^\s*\zs+\ze\s/ conceal cchar=⚫
 
 syntax match numberedItem /^\s*\zs\d\+\.\?\ze\s/
-highlight link numberedItem Comment
+highlight numberedItem cterm=bold
 
 syntax match emphasis /\*.\{-1,}\*/ contains=emphasisMark
-syntax match emphasisMark contained /\*/ conceal
 highlight emphasis cterm=bold
+syntax match emphasisMark contained /\*/ conceal
 
 syntax region emphasisBlock matchgroup=Conceal concealends start='\*' end='\*'
 highlight emphasisBlock cterm=bold
 
 syntax match ruler /^-\{3,}$/ contains=rulerSymbol
-syntax match rulerSymbol contained /-/ conceal cchar=━
-highlight link rulerSymbol Comment
+syntax match rulerSymbol contained /-/ conceal cchar=─
 
 syntax match ruler2 /^=\{3,}$/ contains=ruler2Symbol
-syntax match ruler2Symbol contained /=/ conceal cchar=▬
-highlight link ruler2Symbol Comment
+syntax match ruler2Symbol contained /=/ conceal cchar=━
 
 syntax match url /http\(s\)\?:\/\/\S\+/
 highlight link url Underlined
+
+syntax match itemDone /\<DONE\>/
+highlight itemDone cterm=bold ctermfg=green
+
+syntax match itemInProgress /\<WIP\>/
+highlight itemInProgress cterm=bold ctermfg=yellow
