@@ -18,7 +18,7 @@ syntax match headingSection contained /#/ conceal cchar=§
 
 syntax match item /^\s*\zs-\ze\s/ conceal cchar=─
 
-syntax match item2 /^\s*\zs+\ze\s/ conceal cchar=⚫
+syntax match item2 /^\s*\zs+\ze\s/ conceal cchar=●
 
 syntax match numberedItem /^\s*\zs\d\+\.\?\ze\s/
 highlight numberedItem cterm=bold
