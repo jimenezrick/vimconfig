@@ -61,7 +61,7 @@ autocmd FileType text,notes,markdown,rst,tex,mail setlocal expandtab tabstop=2 s
 autocmd FileType gitcommit                        setlocal expandtab tabstop=2 shiftwidth=2 spell
 autocmd FileType help                             setlocal nospell
 
-autocmd FileType haskell noremap <buffer> <silent> K :execute '!hoogle search --color --info' shellescape(expand('<cword>')) '\| less -R'<Enter>
+autocmd FileType haskell noremap <buffer> <silent> K :execute '!hoogle search --color --info' shellescape(expand('<cWORD>')) '\| less -R'<Enter>
 
 " Startify plugin:
 let startify_custom_header = readfile(split(&runtimepath, ",")[0] . '/logo.txt')
