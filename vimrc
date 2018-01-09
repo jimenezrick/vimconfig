@@ -67,6 +67,23 @@ autocmd FileType haskell noremap <buffer> <silent> K :execute '!hoogle search --
 let startify_custom_header = readfile(split(&runtimepath, ",")[0] . '/logo.txt')
 let startify_change_to_dir = 0
 
+" fzf plugin:
+let g:fzf_colors = {
+	\ 'fg':      ['fg', 'Normal'],
+	\ 'bg':      ['bg', 'Normal'],
+	\ 'hl':      ['fg', 'Comment'],
+	\ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+	\ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+	\ 'hl+':     ['fg', 'Statement'],
+	\ 'info':    ['fg', 'PreProc'],
+	\ 'border':  ['fg', 'Ignore'],
+	\ 'prompt':  ['fg', 'Conditional'],
+	\ 'pointer': ['fg', 'Exception'],
+	\ 'marker':  ['fg', 'Keyword'],
+	\ 'spinner': ['fg', 'Label'],
+	\ 'header':  ['fg', 'Comment']
+	\ }
+
 " Clang plugin:
 let clang_cpp_options = '-std=c++14 -stdlib=libc++'
 
