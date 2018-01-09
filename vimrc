@@ -178,8 +178,11 @@ autocmd FileType text,notes,markdown,rst,tex,mail,gitcommit noremap <buffer> <si
 " Formats current paragraph
 autocmd FileType text,notes,markdown,rst,tex,mail,gitcommit noremap <buffer> <silent> <Leader>p gwap
 
-" Open fzf in find buffer mode
-noremap <silent> <Space> :Buffers<Enter>
+" Open fzf in different modes
+noremap <silent> <Space>   :Buffers<Enter>
+noremap <silent> <C-p>     :Files<Enter>
+noremap <silent> <Leader>p :Tags<Enter>
+
 " Open location list window
 noremap <silent> <Leader><Space> :lopen<Enter>
 
