@@ -38,3 +38,7 @@ separate repositories.
   level directory, commit afterwards:
 
 	git submodule foreach 'git pull'
+
+- To remove an existing submodule:
+
+	git rm bundle/<plugin>
