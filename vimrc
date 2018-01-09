@@ -114,10 +114,6 @@ let necoghc_enable_detailed_browse = 1
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 let $PATH = $PATH . ':' . expand('~/.cabal/bin')
 
-" CtrlP plugin:
-let ctrlp_max_files  = 0
-let ctrlp_extensions = ['tag', 'buffertag']
-
 " Tagbar plugin:
 let tagbar_type_haskell = {
 	\ 'ctagstype' : 'haskell',
@@ -182,8 +178,8 @@ autocmd FileType text,notes,markdown,rst,tex,mail,gitcommit noremap <buffer> <si
 " Formats current paragraph
 autocmd FileType text,notes,markdown,rst,tex,mail,gitcommit noremap <buffer> <silent> <Leader>p gwap
 
-" Open CtrlP in find buffer mode
-noremap <silent> <Space> :CtrlPBuffer<Enter>
+" Open fzf in find buffer mode
+noremap <silent> <Space> :Buffers<Enter>
 " Open location list window
 noremap <silent> <Leader><Space> :lopen<Enter>
 
