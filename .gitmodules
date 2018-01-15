@@ -67,3 +67,6 @@
 [submodule "bundle/fzf"]
 	path = bundle/fzf
 	url = git://github.com/junegunn/fzf.vim.git
+[submodule "bundle/acme-colors"]
+	path = bundle/acme-colors
+	url = git://github.com/plan9-for-vimspace/acme-colors.git
