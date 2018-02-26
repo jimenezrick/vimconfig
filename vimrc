@@ -198,7 +198,7 @@ autocmd FileType text,notes,markdown,rst,tex,mail,gitcommit noremap <buffer> <si
 " Open fzf in different modes
 noremap <silent> <Space>   :Buffers<Enter>
 noremap <silent> <C-p>     :Files<Enter>
-noremap <silent> <Leader>p :Tags<Enter>
+noremap <silent> <Leader>P :Tags<Enter>
 
 " Open location list window
 noremap <silent> <Leader><Space> :lopen<Enter>
