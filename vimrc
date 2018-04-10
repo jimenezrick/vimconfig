@@ -54,7 +54,7 @@ autocmd BufEnter *.sls                            setlocal filetype=yaml
 
 autocmd FileType c,cpp                            setlocal foldmethod=syntax cinoptions=(0,g0,N-s,:0,l1,t0 | compiler gcc
 autocmd FileType go                               setlocal foldmethod=syntax formatoptions+=ro suffixesadd=.go
-autocmd FileType haskell                          setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=2 foldmethod=indent
+autocmd FileType haskell                          setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=2 foldmethod=indent formatprg=hindent
 autocmd FileType cabal,yaml                       setlocal expandtab tabstop=2 shiftwidth=2
 autocmd FileType text,notes,markdown,rst,tex,mail setlocal textwidth=72 formatoptions+=2l colorcolumn=+1
 autocmd FileType text,notes,markdown,rst,tex,mail setlocal expandtab tabstop=2 shiftwidth=2 spell
@@ -194,6 +194,8 @@ noremap <silent> <F12>     :SpellThis<Enter>
 autocmd FileType text,notes,markdown,rst,tex,mail,gitcommit noremap <buffer> <silent> <Leader>s 1z=
 " Formats current paragraph
 autocmd FileType text,notes,markdown,rst,tex,mail,gitcommit noremap <buffer> <silent> <Leader>p gwap
+" Formats Haskell function with hindent
+autocmd FileType haskell noremap <buffer> <silent> <Leader>f gqip
 
 " Open fzf in different modes
 noremap <silent> <Space>   :Buffers<Enter>
