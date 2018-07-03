@@ -110,6 +110,9 @@ let gutentags_project_info             = [
 	\ {'type': 'go', 'glob': '*/*.go'}
 \ ]
 
+" Sneak plugin:
+let sneak#label = 1
+
 " Vim-go plugin:
 let go_auto_type_info    = 1
 let go_fmt_fail_silently = 1
