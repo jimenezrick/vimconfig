@@ -13,9 +13,6 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = git://github.com/tpope/vim-fugitive.git
-[submodule "bundle/vimproc"]
-	path = bundle/vimproc
-	url = git://github.com/Shougo/vimproc.git
 [submodule "bundle/vim-easy-align"]
 	path = bundle/vim-easy-align
 	url = git://github.com/junegunn/vim-easy-align.git
