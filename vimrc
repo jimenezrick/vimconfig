@@ -116,11 +116,13 @@ let go_fmt_fail_silently = 1
 let go_fmt_command       = 'goimports'
 
 " haskell-vim plugin:
-let haskell_enable_quantification = 1
-let haskell_indent_if             = 4
-let haskell_indent_case           = 4
-let haskell_indent_in             = 0
-let haskell_indent_before_where   = 2
+let haskell_enable_quantification   = 1
+let haskell_indent_guard            = 4
+let haskell_indent_if               = 4
+let haskell_indent_case             = 4
+let haskell_indent_in               = 1
+let haskell_indent_before_where     = 2
+let haskell_indent_after_bare_where = 2
 
 " GHC-mod plugin:
 autocmd FileType haskell noremap <buffer> <silent> <Leader>e :GhcModCheckAsync<Enter>
