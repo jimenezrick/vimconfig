@@ -127,15 +127,6 @@ let haskell_indent_in               = 1
 let haskell_indent_before_where     = 2
 let haskell_indent_after_bare_where = 2
 
-" GHC-mod plugin:
-autocmd FileType haskell noremap <buffer> <silent> <Leader>e :GhcModCheckAsync<Enter>
-autocmd FileType haskell noremap <buffer> <silent> <Leader>t :GhcModType<Enter>
-
-" Neco-GHC plugin:
-let necoghc_enable_detailed_browse = 1
-autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
-let $PATH = $PATH . ':' . expand('~/.cabal/bin')
-
 " Tagbar plugin:
 let tagbar_type_haskell = {
 	\ 'ctagsbin'  : 'hasktags',
