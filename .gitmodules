@@ -73,3 +73,6 @@
 [submodule "bundle/dhall-vim"]
 	path = bundle/dhall-vim
 	url = git://github.com/vmchale/dhall-vim.git
+[submodule "bundle/sneak"]
+	path = bundle/sneak
+	url = git://github.com/justinmk/vim-sneak.git
