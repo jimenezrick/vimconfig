@@ -64,3 +64,6 @@
 [submodule "bundle/sneak"]
 	path = bundle/sneak
 	url = git://github.com/justinmk/vim-sneak.git
+[submodule "bundle/ale"]
+	path = bundle/ale
+	url = git://github.com/w0rp/ale.git
