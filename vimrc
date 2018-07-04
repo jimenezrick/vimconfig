@@ -100,6 +100,13 @@ let gutentags_project_info             = [
 	\ {'type': 'go', 'glob': '*/*.go'}
 \ ]
 
+" Ale plugin:
+let ale_lint_delay    = 5000
+let ale_lint_on_enter = 0
+let ale_linters       = {
+	\ 'haskell': ['cabal-repl', 'my-ghc', 'hlint'],
+	\ }
+
 " Sneak plugin:
 let sneak#label = 1
 
