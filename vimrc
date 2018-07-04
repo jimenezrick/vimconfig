@@ -87,16 +87,6 @@ let g:fzf_colors = {
 " Clang plugin:
 let clang_cpp_options = '-std=c++14 -stdlib=libc++'
 
-" Neomake plugin:
-let neomake_error_sign   = {'text': 'E>', 'texthl': 'NeomakeErrorSign'}
-let neomake_warning_sign = {'text': 'W>', 'texthl': 'NeomakeWarningSign'}
-let neomake_message_sign = {'text': 'M>', 'texthl': 'NeomakeMessageSign'}
-let neomake_info_sign    = {'text': 'I>', 'texthl': 'NeomakeInfoSign'}
-
-highlight NeomakeErrorSign ctermfg=red
-highlight NeomakeError     ctermfg=red cterm=underline
-autocmd! BufWritePost * Neomake
-
 " Grepper plugin:
 let grepper       = {}
 let grepper.tools = ['git', 'grep']
