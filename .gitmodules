@@ -67,3 +67,6 @@
 [submodule "bundle/ale"]
 	path = bundle/ale
 	url = git://github.com/w0rp/ale.git
+[submodule "bundle/vim-illuminate"]
+	path = bundle/vim-illuminate
+	url = git://github.com/RRethy/vim-illuminate.git
