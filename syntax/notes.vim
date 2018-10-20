@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language: Notes
-" Author:   Ricardo Catalinas Jiménez <jimenezrick@gmail.com>
-" Version:  Tue Oct 24 11:21:58 BST 2017
+" Author:   Ricardo Catalinas Jiménez <r@untroubled.be>
+" Version:  Sat Oct 20 12:28:38 UTC 2018
 
 if exists('b:current_syntax')
 	finish
@@ -22,6 +22,9 @@ syntax match item2 /^\s*\zs+\ze\s/ conceal cchar=●
 
 syntax match numberedItem /^\s*\zs\d\+\.\?\ze\s/
 highlight numberedItem cterm=bold
+
+syntax match code /^|.*/
+highlight code cterm=bold
 
 syntax match emphasis /\*.\{-1,}\*/ contains=emphasisMark
 highlight emphasis cterm=bold
