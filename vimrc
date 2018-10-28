@@ -82,7 +82,7 @@ let g:fzf_colors = {
 	\ 'marker':  ['fg', 'Keyword'],
 	\ 'spinner': ['fg', 'Label'],
 	\ 'header':  ['fg', 'Comment']
-	\ }
+\ }
 
 " Clang plugin:
 let clang_cpp_options = '-std=c++14 -stdlib=libc++'
@@ -106,7 +106,12 @@ let ale_lint_on_enter = 0
 let ale_linters       = {
 	\ 'haskell': ['cabal-repl', 'my-ghc', 'hlint'],
 	\ 'rust': ['rustc', 'cargo'],
-	\ }
+\ }
+call ale#fix#registry#Add('hindent', 'ale#fixers#hindent#Fix', ['haskell'], 'Haskell pretty printer')
+let ale_fix_on_save   = 1
+let ale_fixers        = {
+	\ 'haskell': ['hindent'],
+\ }
 
 " Racer plugin:
 let racer_experimental_completer = 1
