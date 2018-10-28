@@ -105,7 +105,15 @@ let ale_lint_delay    = 5000
 let ale_lint_on_enter = 0
 let ale_linters       = {
 	\ 'haskell': ['cabal-repl', 'my-ghc', 'hlint'],
+	\ 'rust': ['rustc', 'cargo'],
 	\ }
+
+" Racer plugin:
+let racer_experimental_completer = 1
+autocmd FileType rust nmap gd <Plug>(rust-def)
+autocmd FileType rust nmap gs <Plug>(rust-def-split)
+autocmd FileType rust nmap gx <Plug>(rust-def-vertical)
+autocmd FileType rust nmap <leader>gd <Plug>(rust-doc)
 
 " Sneak plugin:
 let sneak#label = 1
