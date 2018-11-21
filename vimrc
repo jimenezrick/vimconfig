@@ -107,11 +107,12 @@ let ale_linters       = {
 	\ 'haskell': ['cabal-repl', 'my-ghc', 'hlint'],
 	\ 'rust': ['rustc', 'cargo'],
 \ }
-call ale#fix#registry#Add('hindent', 'ale#fixers#hindent#Fix', ['haskell'], 'Haskell pretty printer')
 let ale_fix_on_save   = 1
 let ale_fixers        = {
 	\ 'haskell': ['hindent'],
+	\ 'rust': ['rustfmt'],
 \ }
+call ale#fix#registry#Add('hindent', 'ale#fixers#hindent#Fix', ['haskell'], 'Haskell pretty printer')
 
 " Racer plugin:
 let racer_experimental_completer = 1
