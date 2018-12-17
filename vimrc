@@ -63,6 +63,9 @@ autocmd FileType help                             setlocal nospell
 
 autocmd FileType haskell noremap <buffer> <silent> K :execute '!hoogle search --color --info' shellescape(expand('<cWORD>')) '\| less -R'<Enter>
 
+" NERDTree plugin:
+let NERDTreeMinimalUI = 1
+
 " Startify plugin:
 let startify_custom_header = readfile(split(&runtimepath, ",")[0] . '/logo.txt')
 let startify_change_to_dir = 0
@@ -139,6 +142,7 @@ let haskell_indent_before_where     = 2
 let haskell_indent_after_bare_where = 2
 
 " Tagbar plugin:
+let tagbar_compact      = 1
 let tagbar_type_haskell = {
 	\ 'ctagsbin'  : 'hasktags',
 	\ 'ctagsargs' : '-x -c -o-',
