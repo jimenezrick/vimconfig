@@ -108,7 +108,7 @@ let ale_lint_delay    = 5000
 let ale_lint_on_enter = 0
 let ale_linters       = {
 	\ 'haskell': ['cabal-repl', 'my-ghc', 'hlint'],
-	\ 'rust': ['rustc', 'cargo'],
+	\ 'rust': ['cargo'],
 \ }
 let ale_fix_on_save   = 1
 let ale_fixers        = {
