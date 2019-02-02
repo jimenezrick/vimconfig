@@ -76,3 +76,6 @@
 [submodule "bundle/julia-vim"]
 	path = bundle/julia-vim
 	url = git://github.com/JuliaEditorSupport/julia-vim.git
+[submodule "bundle/codi.vim"]
+	path = bundle/codi.vim
+	url = git://github.com/metakirby5/codi.vim.git
